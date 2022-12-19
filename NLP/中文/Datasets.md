@@ -3,6 +3,8 @@
 
   [Mirrors of XML dumps, images and other data](https://dumps.wikimedia.org/mirrors.html)
 
+  约 45% 的文档长度小于 100 字符。
+
   [WikiExtractor: A tool for extracting plain text from Wikipedia dumps](https://github.com/attardi/wikiextractor/)
   - [维基百科简体中文语料的提取 - 知乎](https://zhuanlan.zhihu.com/p/39960476)
 
