@@ -1,4 +1,4 @@
-# Artificial Intelligence
+# [Artificial Intelligence](Artificial%20Intelligence.md)
 ## [Natural Language Processing](NLP/README.md)
 - Distributional Semantics
   - [Word Embedding](NLP/Distributional%20Semantics/Word%20Embedding/README.md)
