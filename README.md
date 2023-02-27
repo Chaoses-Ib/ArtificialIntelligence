@@ -1,4 +1,8 @@
 # [Artificial Intelligence](Artificial%20Intelligence.md)
+## Machine Learning
+- [→Logistic Function](https://github.com/Chaoses-Ib/Mathematics/blob/main/Analysis/Functions/Logistic%20Function.md)
+  - [Softmax Function](Machine%20Learning/Softmax%20Function.md)
+
 ## [Natural Language Processing](NLP/README.md)
 - Distributional Semantics
   - [Word Embedding](NLP/Distributional%20Semantics/Word%20Embedding/README.md)
@@ -11,3 +15,5 @@
   - [Datasets](NLP/中文/Datasets.md)
   - [中文分词](NLP/中文/分词.md)
   - [Stop Words](NLP/中文/Stop%20Words.md)
+
+## [→Computer Vision](https://github.com/Chaoses-Ib/VisualComputing#computer-vision)
