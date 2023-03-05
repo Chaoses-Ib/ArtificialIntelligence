@@ -1,7 +1,8 @@
 # [Artificial Intelligence](Artificial%20Intelligence.md)
-## Machine Learning
+## [Machine Learning](Machine%20Learning/README.md)
 - [→Logistic Function](https://github.com/Chaoses-Ib/Mathematics/blob/main/Analysis/Functions/Logistic%20Function.md)
   - [Softmax Function](Machine%20Learning/Softmax%20Function.md)
+- [PyTorch](Machine%20Learning/PyTorch/README.md)
 
 ## [Natural Language Processing](NLP/README.md)
 - Distributional Semantics
