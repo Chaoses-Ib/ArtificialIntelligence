@@ -1,4 +1,5 @@
 # Datasets
+## Chinese
 - [zhwiki dump](https://dumps.wikimedia.org/zhwiki/20221201/)
 
   [Mirrors of XML dumps, images and other data](https://dumps.wikimedia.org/mirrors.html)
@@ -17,6 +18,6 @@
     - [搜狐新闻数据（SogouCS）](https://web.archive.org/web/20220503011135/https://www.sogou.com/labs/resource/cs.php)
 - [Baseline for Chinese Natural Language Inference (CNLI) dataset](https://github.com/blcunlp/CNLI)
 
-## Information sources
+### Information sources
 - [互联网上开放的中文语料库有哪些？ - 知乎](https://www.zhihu.com/question/21177095)
 - [常用数据集简介 · duoergun0729/nlp](https://github.com/duoergun0729/nlp/blob/master/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E7%AE%80%E4%BB%8B.md)

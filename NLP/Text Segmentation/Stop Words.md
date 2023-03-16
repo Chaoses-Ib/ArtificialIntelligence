@@ -1,4 +1,5 @@
 # Stop Words
+## Chinese
 [中文常用停用词表](https://github.com/goto456/stopwords)
 - 中文停用词表
 - 哈工大停用词表
