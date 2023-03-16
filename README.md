@@ -11,6 +11,7 @@
 - [Text Segmentation](NLP/Text%20Segmentation/README.md)
   - [Tokenization](NLP/Text%20Segmentation/Tokenization.md)
   - [Stop Words](NLP/Text%20Segmentation/Stop%20Words.md)
+- [Text Encoding](NLP/Text%20Encoding.md)
 - Distributional Semantics
   - [Word Embedding](NLP/Distributional%20Semantics/Word%20Embedding/README.md)
 - [Topic Modeling](NLP/Topic%20Modeling/README.md)
