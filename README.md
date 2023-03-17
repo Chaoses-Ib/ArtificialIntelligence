@@ -1,7 +1,6 @@
 # [Artificial Intelligence](Artificial%20Intelligence.md)
 ## [Machine Learning](Machine%20Learning/README.md)
-- [→Logistic Function](https://github.com/Chaoses-Ib/Mathematics/blob/main/Analysis/Functions/Logistic%20Function.md)
-  - [Softmax Function](Machine%20Learning/Softmax%20Function.md)
+- [Activation Functions](Machine%20Learning/Activation%20Functions.md) ([Python](Machine%20Learning/Activation%20Functions.ipynb))
 - [Neural Networks](Machine%20Learning/Neural%20Networks/README.md)
   - [Feed-forward Neural Networks](Machine%20Learning/Neural%20Networks/Feed-forward%20Neural%20Networks.md) ([Python](Machine%20Learning/Neural%20Networks/Feed-forward%20Neural%20Networks.ipynb))
 - [PyTorch](Machine%20Learning/PyTorch/README.md)
