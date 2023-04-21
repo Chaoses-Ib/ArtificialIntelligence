@@ -33,4 +33,8 @@ $$\delta_j = h'(a_j) \sum_k w_{kj} \delta_k$$
 Therefore
 $${\partial E_n \over \partial w_{ji}} = h'(a_j) z_i \sum_k w_{kj} \delta_k$$
 
+## Implementations
+PyTorch:
+- [Feedforward Neural Networks (FNN) - Deep Learning Wizard](https://www.deeplearningwizard.com/deep_learning/practical_pytorch/pytorch_feedforward_neuralnetwork/#summary)
+
 [^prml]: Pattern Recognition and Machine Learning

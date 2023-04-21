@@ -1,9 +1,14 @@
 # [Artificial Intelligence](Artificial%20Intelligence.md)
 ## [Machine Learning](Machine%20Learning/README.md)
-- [Activation Functions](Machine%20Learning/Activation%20Functions.md) ([Python](Machine%20Learning/Activation%20Functions.ipynb))
-- [Neural Networks](Machine%20Learning/Neural%20Networks/README.md)
-  - [Feed-forward Neural Networks](Machine%20Learning/Neural%20Networks/Feed-forward%20Neural%20Networks.md) ([Python](Machine%20Learning/Neural%20Networks/Feed-forward%20Neural%20Networks.ipynb))
-- [PyTorch](Machine%20Learning/PyTorch/README.md)
+- [→Statistics](https://github.com/Chaoses-Ib/Statistics)
+
+### [Artificial Neural Networks](Machine%20Learning/Neural%20Networks/README.md)
+- [Activation Functions](Machine%20Learning/Neural%20Networks/Activation%20Functions.md) ([Python](Machine%20Learning/Neural%20Networks/Activation%20Functions.ipynb))
+- [Feed-forward Neural Networks](Machine%20Learning/Neural%20Networks/Feed-forward.md) ([Python](Machine%20Learning/Neural%20Networks/Feed-forward.ipynb))
+- [Convolutional Neural Networks](Machine%20Learning/Neural%20Networks/Convolutional/README.md)
+- Libraries
+  - [PyTorch](Machine%20Learning/Neural%20Networks/PyTorch/README.md)
+  - [MindSpore](Machine%20Learning/Neural%20Networks/MindSpore/README.md)
 
 ## [Natural Language Processing](NLP/README.md)
 - [Datasets](NLP/Datasets.md)
@@ -19,4 +24,8 @@
 - [Text Search](NLP/Text%20Search.md)
 - [Chatbots](NLP/Chatbots.md)
 
-## [→Computer Vision](https://github.com/Chaoses-Ib/VisualComputing#computer-vision)
+## [→Visual Computing](https://github.com/Chaoses-Ib/VisualComputing)
+- [→Computer Vision](https://github.com/Chaoses-Ib/VisualComputing#computer-vision)
+- [→Image Processing](https://github.com/Chaoses-Ib/VisualComputing#image-processing)
+- [→Video Processing](https://github.com/Chaoses-Ib/VisualComputing#video-processing)
+- [→Natural Language Processing](https://github.com/Chaoses-Ib/VisualComputing#natural-language-processing)

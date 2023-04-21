@@ -1,6 +1,10 @@
 # Artificial Intelligence
 [Wikipedia](https://en.wikipedia.org/wiki/Artificial_intelligence)
 
+- Symbolism
+- Connectionism
+- Actionism
+
 智能是知识与智力的总和，那么在当前的 AI 中，知识与智力是独立发展的还是统一发展的？
 
 ## Machine learning

@@ -1,4 +1,9 @@
 # Machine Learning
+Challenges motivating deep learning:
+- The curse of dimensionality
+- Local constancy and smoothness regularization
+- Manifold learning
+
 ## Performance
 - [PyTorch](PyTorch/README.md)
   - [Distributed Data Parallel](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html)
@@ -9,10 +14,13 @@
   - [PyTorch/XLA: Enabling PyTorch on Google TPU](https://github.com/pytorch/xla)
 - [Lightning: Deep learning framework to train, deploy, and ship AI products Lightning fast.](https://github.com/Lightning-AI/lightning)
   - [Train 1 trillion+ parameter models](https://lightning.ai/docs/pytorch/latest/advanced/model_parallel.html)
+  - [Introducing PyTorch Lightning Sharded: Train SOTA Models, With Half The Memory | by Sean Narenthiran | PyTorch | Medium](https://seannaren.medium.com/introducing-pytorch-lightning-sharded-train-sota-models-with-half-the-memory-7bcc8b4484f2)
   - [Colossal-AI](https://lightning.ai/docs/pytorch/stable/advanced/third_party/colossalai.html)
 
   [Pytorch Lightning 完全攻略 - 知乎](https://zhuanlan.zhihu.com/p/353985363)
 - [ColossalAI: Making large AI models cheaper, faster and more accessible](https://github.com/hpcaitech/ColossalAI)
+
+  Only Linux is supported for now.
 - [DirectML: A high-performance, hardware-accelerated DirectX 12 library for machine learning](https://github.com/microsoft/DirectML)
 
   [Using AMD and Intel GPUs on Windows with Tensorflow DirectML | videogames.ai](https://www.videogames.ai/2020/06/11/AMD-Intel-GPU-Windows-Tensorflow-DirectML.html)
