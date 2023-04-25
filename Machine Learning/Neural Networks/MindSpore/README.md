@@ -3,6 +3,13 @@
 
 [快速入门：手写数字识别](https://www.mindspore.cn/tutorials/zh-CN/r1.7/beginner/quick_start.html)
 
+## [MindSpore Lite](https://www.mindspore.cn/lite)
+[1小时入门AI开发工程师](https://www.mindspore.cn/news/newschildren?id=354)
+- [Getting Started with AI Development in One Hour](https://www.mindspore.cn/news/newschildren/en?id=409)
+- [Index of /model_zoo/official/lite/mobilenetv2_openimage_lite/](https://download.mindspore.cn/model_zoo/official/lite/mobilenetv2_openimage_lite/)
+
+[如何处理使用MindSpore Lite的converter_lite工具转换模型失败的问题 - 昇思MindSpore的博客](https://blog.csdn.net/kenji_shinji/article/details/127103555)
+
 ## PyTorch
 [迁移指南](https://www.mindspore.cn/docs/zh-CN/r2.0.0-alpha/migration_guide/overview.html)
 
