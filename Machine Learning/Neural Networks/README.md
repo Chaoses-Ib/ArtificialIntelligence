@@ -64,6 +64,8 @@ Challenges motivating deep learning:
 ## Information sources
 Books:
 - [Deep Learning](https://www.deeplearningbook.org/)
+
+  好书，不过是 2016 年的，有一点旧了。
 - [神经网络与深度学习](https://nndl.github.io/) ([GitHub](https://github.com/nndl/nndl.github.io))
 
   烂书。

@@ -49,6 +49,8 @@ $$S(i,j)=(I\ast K)(i,j)=\sum_m\sum_n I(i+m,j+n)K(m,n)$$
 
 Discrete convolution can be viewed as multiplication by a matrix, but the matrix has several entries constrained to be equal to other entries. For example, for univariate discrete convolution, each row of the matrix is constrained to be equal to the row above shifted by one element. This is known as a **Toeplitz matrix**. In two dimensions, a **doubly block circulant matrix** corresponds to convolution.[^deeplearning]
 
+$$N_\text{output}={N_\text{inputs} + 2N_\text{padding} - N_\text{kernel} \over \text{stride} } + 1$$
+
 ## Pooling
 ```mermaid
 flowchart BT
@@ -66,6 +68,74 @@ The use of pooling can be viewed as adding an inﬁnitely strong prior that the 
 For many tasks, pooling is essential for handling inputs of varying size. For example, if we want to classify images of variable size, the input to the classiﬁcation layer must have a ﬁxed size. This is usually accomplished by varying the size of an oﬀset between pooling regions so that the classiﬁcation layer always receives the same number of summary statistics regardless of the input size.
 
 Pooling 和 image scaling 都可以用于将图像转换到指定大小，两者在一定程度上是等价的。
+
+## LeNet
+[^lenet]
+[Wikipedia](https://en.wikipedia.org/wiki/LeNet)
+
+```mermaid
+flowchart TD
+    input["Image: 28×28×1 (channel)"]
+    --> conv1["Convolution with 6 5×5 kernel+2 padding: 28×28×6"]:::conv
+    --sigmoid--> pool1["Pool with 2×2 average kernel+2 stride: 14×14×6"]:::pool
+    --> conv2["Convolution with 16 5×5 kernel (no pad): 10×10×16"]:::conv
+    --sigmoid--> pool2["Pool with 2×2 average kernel+2 stride: 5×5×16"]:::pool
+    --flatten--> dense1["Dense: 120 fully connected neurons"]:::dense
+    --sigmoid--> dense2["Dense: 84 fully connected neurons"]:::dense
+    --sigmoid--> dense3["Dense: 10 fully connected neurons"]:::dense
+    --> output["Output: 1 of 10 classes"]
+
+    classDef conv fill:#8aeff0,color:#000;
+    classDef pool fill:#f7cffc,color:#000;
+    classDef dense fill:#fcef4f,color:#000;
+```
+
+[^lenet]: Lecun, Y., L. Bottou, Y. Bengio, and P. Haffner. “Gradient-Based Learning Applied to Document Recognition.” _Proceedings of the IEEE_ 86, no. 11 (November 1998): 2278–2324. [https://doi.org/10.1109/5.726791](https://doi.org/10.1109/5.726791).
+
+## AlexNet
+[^alexnet]
+[Wikipedia](https://en.wikipedia.org/wiki/AlexNet)
+
+```mermaid
+flowchart RL
+    subgraph LeNet
+    direction TB
+    input["Image: 28×28×1 (channel)"]
+    --> conv1["Convolution with 6 5×5 kernel+2 padding: 28×28×6"]:::conv
+    --sigmoid--> pool1["Pool with 2×2 average kernel+2 stride: 14×14×6"]:::pool
+    --> conv2["Convolution with 16 5×5 kernel (no pad): 10×10×16"]:::conv
+    --sigmoid--> pool2["Pool with 2×2 average kernel+2 stride: 5×5×16"]:::pool
+    --flatten--> dense1["Dense: 120 fully connected neurons"]:::dense
+    --sigmoid--> dense2["Dense: 84 fully connected neurons"]:::dense
+    --sigmoid--> dense3["Dense: 10 fully connected neurons"]:::dense
+    --> output["Output: 1 of 10 classes"]
+    end
+
+    subgraph AlexNet
+    direction TB
+    Ainput["Image: 224×224×3 (channel)"]
+    --> Aconv1["Convolution with 11×11 kernel+4 stride: 54×54×96"]:::conv
+    --ReLu--> Apool1["Pool with 3×3 max. kernel+2 stride: 26×26×96"]:::pool
+    --> Aconv2["Convolution with 5×5 kernel+2 pad: 26×26×256"]:::conv
+    --ReLu--> Apool2["Pool with 3×3 max. kernel+2 stride: 12×12×256"]:::pool
+    --> Aconv3["Convolution with 3×3 kernel+1 pad: 12×12×384"]:::conv
+    --ReLu--> Aconv4["Convolution with 3×3 kernel+1 pad: 12×12×384"]:::conv
+    --ReLu--> Aconv5["Convolution with 3×3 kernel+1 pad: 12×12×256"]:::conv
+    --ReLu--> Apool3["Pool with 3×3 max. kernel+2 stride: 5×5×256"]:::pool
+    --flatten--> Adense1["Dense: 4096 fully connected neurons"]:::dense
+    --sigmoid--> Adense2["Dense: 4096 fully connected neurons"]:::dense
+    --sigmoid--> Adense3["Dense: 1000 fully connected neurons"]:::dense
+    --> Aoutput["Output: 1 of 1000 classes"]
+    end
+
+    LeNet --> AlexNet
+
+    classDef conv fill:#8aeff0,color:#000;
+    classDef pool fill:#f7cffc,color:#000;
+    classDef dense fill:#fcef4f,color:#000;
+```
+
+[^alexnet]: Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E Hinton. “ImageNet Classification with Deep Convolutional Neural Networks.” In _Advances in Neural Information Processing Systems_, Vol. 25. Curran Associates, Inc., 2012. [https://proceedings.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html).
 
 
 [^deeplearning]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. _Deep Learning_. MIT Press, 2016.
