@@ -1,4 +1,7 @@
 # [Artificial Intelligence](Artificial%20Intelligence.md)
+## [Evolutionary Computation](Evolutionary/README.md)
+- [Genetic Algorithms](Evolutionary/Genetic/README.md)
+
 ## [Machine Learning](Machine%20Learning/README.md)
 - [→Statistics](https://github.com/Chaoses-Ib/Statistics)
 
@@ -30,3 +33,5 @@
 - [→Image Processing](https://github.com/Chaoses-Ib/VisualComputing#image-processing)
 - [→Video Processing](https://github.com/Chaoses-Ib/VisualComputing#video-processing)
 - [→Natural Language Processing](https://github.com/Chaoses-Ib/VisualComputing#natural-language-processing)
+
+## [→Sound Computing](https://github.com/Chaoses-Ib/SoundComputing)
