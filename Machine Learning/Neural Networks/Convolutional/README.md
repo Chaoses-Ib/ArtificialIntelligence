@@ -69,10 +69,13 @@ For many tasks, pooling is essential for handling inputs of varying size. For ex
 
 Pooling 和 image scaling 都可以用于将图像转换到指定大小，两者在一定程度上是等价的。
 
+[How to Develop a CNN for MNIST Handwritten Digit Classification - MachineLearningMastery.com](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-from-scratch-for-mnist-handwritten-digit-classification/)
+
 ## LeNet
 [^lenet]
 [Wikipedia](https://en.wikipedia.org/wiki/LeNet)
 
+LeNet-5:
 ```mermaid
 flowchart TD
     input["Image: 28×28×1 (channel)"]
@@ -89,6 +92,12 @@ flowchart TD
     classDef pool fill:#f7cffc,color:#000;
     classDef dense fill:#fcef4f,color:#000;
 ```
+
+PyTorch:
+- [Writing LeNet5 from Scratch in PyTorch](https://blog.paperspace.com/writing-lenet5-from-scratch-in-python/)
+- [7.6. Convolutional Neural Networks (LeNet) — Dive into Deep Learning 1.0.0-beta0 documentation](https://d2l.ai/chapter_convolutional-neural-networks/lenet.html)
+- [How My LeNet Achieves 99% Accuracy | Cuda Chen’s Blog](https://cuda-chen.github.io/deep%20learning/2021/09/23/lenet-99.html)
+
 
 [^lenet]: Lecun, Y., L. Bottou, Y. Bengio, and P. Haffner. “Gradient-Based Learning Applied to Document Recognition.” _Proceedings of the IEEE_ 86, no. 11 (November 1998): 2278–2324. [https://doi.org/10.1109/5.726791](https://doi.org/10.1109/5.726791).
 
@@ -134,6 +143,10 @@ flowchart RL
     classDef pool fill:#f7cffc,color:#000;
     classDef dense fill:#fcef4f,color:#000;
 ```
+
+PyTorch:
+- [Image-Recognition-on-MNIST-dataset/AlexNet.ipynb](https://github.com/l5shi/Image-Recognition-on-MNIST-dataset/blob/master/AlexNet.ipynb)
+
 
 [^alexnet]: Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E Hinton. “ImageNet Classification with Deep Convolutional Neural Networks.” In _Advances in Neural Information Processing Systems_, Vol. 25. Curran Associates, Inc., 2012. [https://proceedings.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html).
 
