@@ -8,10 +8,11 @@
 ### [Artificial Neural Networks](Machine%20Learning/Neural%20Networks/README.md)
 - [Activation Functions](Machine%20Learning/Neural%20Networks/Activation%20Functions.md) ([Python](Machine%20Learning/Neural%20Networks/Activation%20Functions.ipynb))
 - [Feed-forward Neural Networks](Machine%20Learning/Neural%20Networks/Feed-forward.md) ([Python](Machine%20Learning/Neural%20Networks/Feed-forward.ipynb))
-- [Convolutional Neural Networks](Machine%20Learning/Neural%20Networks/Convolutional/README.md) ([Python](Machine%20Learning/Neural%20Networks/Convolutional/README.ipynb))
 - [Residual Neural Networks](Machine%20Learning/Neural%20Networks/Residual/README.md)
+- [Convolutional Neural Networks](Machine%20Learning/Neural%20Networks/Convolutional/README.md) ([Python](Machine%20Learning/Neural%20Networks/Convolutional/README.ipynb))
 - [Recurrent Neural Networks](Machine%20Learning/Neural%20Networks/Recurrent/README.md)
 - [Recursive Neural Networks](Machine%20Learning/Neural%20Networks/Recursive/README.md)
+- [Transformer](Machine%20Learning/Neural%20Networks/Transformer/README.md)
 - Libraries
   - [PyTorch](Machine%20Learning/Neural%20Networks/PyTorch/README.md)
   - [MindSpore](Machine%20Learning/Neural%20Networks/MindSpore/README.md)
