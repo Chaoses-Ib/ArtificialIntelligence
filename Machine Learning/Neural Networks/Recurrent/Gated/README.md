@@ -1,7 +1,7 @@
 # Gated Recurrent Neural Networks
 Like leaky units, **gated RNNs** are based on the idea of creating paths through time that have derivatives that neither vanish nor explode. Leaky units did this with connection weights that were either manually chosen constants or were parameters. Gated RNNs generalize this to connection weights that may change at each timestep.
 
-Leaky units allow the network to accumulate information (such as evidence for a particular feature or category) over a long duration. Once that information has been used, however, it might be useful for the neural network to forget the old state. For example, if a sequence is made of subsequences and we want a leaky unit to accumulate evidence inside each sub-subsequence, we need a mechanism to forget the old state by setting it to zero. Instead of manually deciding when to clear the state, we want the neural network to learn to decide when to do it. This is what gated RNNs do.
+Leaky units allow the network to accumulate information (such as evidence for a particular feature or category) over a long duration. Once that information has been used, however, it might be useful for the neural network to forget the old state. For example, if a sequence is made of subsequences and we want a leaky unit to accumulate evidence inside each sub-subsequence, we need a mechanism to forget the old state by setting it to zero. Instead of manually deciding when to clear the state, we want the neural network to learn to decide when to do it. This is what gated RNNs do.[^deeplearning]
 
 ## Long short-term memory
 [Wikipedia](https://en.wikipedia.org/wiki/Long_short-term_memory)
@@ -42,7 +42,7 @@ q_i^{(t)}&=
 
 Among the variants, one can choose to use the cell state $s_i^{(t)}$ as an extra input (with its weight) into the three gates of the $i$-th unit. This would require three additional parameters.
 
-LSTM networks have been shown to learn long-term dependencies more easily than the simple recurrent architecture. The LSTM has been found extremely successful in many applications.
+LSTM networks have been shown to learn long-term dependencies more easily than the simple recurrent architecture. The LSTM has been found extremely successful in many applications.[^deeplearning]
 
 ## Gated recurrent units
 [Wikipedia](https://en.wikipedia.org/wiki/Gated_recurrent_unit)
@@ -67,8 +67,11 @@ r_i^{(t)}&=
 
 The reset and update gates can individually “ignore” parts of the state vector. The **update gates** act like conditional leaky integrators that can linearly gate any dimension, thus choosing to copy it (at one extreme of the sigmoid) or completely ignore it (at the other extreme) by replacing it with the new “target state” value (toward which the leaky integrator wants to converge). The **reset gates** control which parts of the state get used to compute the next target state, introducing an additional nonlinear effect in the relationship between past state and future state.
 
-Many more variants around this theme can be designed. For example the reset gate (or forget gate) output could be shared across multiple hidden units. Alternately, the product of a global gate (covering a whole group of units, such as an entire layer) and a local gate (per unit) could be used to combine global control and local control. Several investigations over architectural variations of the LSTM and GRU, however, found no variant that would clearly beat both of these across a wide range of tasks. Greff et al. (2015) found that a crucial ingredient is the forget gate, while Jozefowicz et al. (2015) found that adding a bias of $1$ to the LSTM forget gate, a practice advocated by Gers et al. (2000), makes the LSTM as strong as the best of the explored architectural variants.
+Many more variants around this theme can be designed. For example the reset gate (or forget gate) output could be shared across multiple hidden units. Alternately, the product of a global gate (covering a whole group of units, such as an entire layer) and a local gate (per unit) could be used to combine global control and local control. Several investigations over architectural variations of the LSTM and GRU, however, found no variant that would clearly beat both of these across a wide range of tasks. Greff et al. (2015) found that a crucial ingredient is the forget gate, while Jozefowicz et al. (2015) found that adding a bias of $1$ to the LSTM forget gate, a practice advocated by Gers et al. (2000), makes the LSTM as strong as the best of the explored architectural variants.[^deeplearning]
 
 [neural network - When to use GRU over LSTM? - Data Science Stack Exchange](https://datascience.stackexchange.com/questions/14581/when-to-use-gru-over-lstm)
 - 由于 GRU 只有两个 gate，更容易训练，在算力不充足时 GRU 的表现可能比 LSTM 更好。
 - LSTM 的理论记忆力比 GRU 更强。
+
+
+[^deeplearning]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. _Deep Learning_. MIT Press, 2016.
