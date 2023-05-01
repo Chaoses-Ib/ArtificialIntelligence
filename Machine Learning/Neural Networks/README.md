@@ -1,4 +1,6 @@
 # Artificial Neural Networks
+[Wikipedia](https://en.wikipedia.org/wiki/Artificial_neural_network)
+
 ```mermaid
 flowchart LR
     x --> mul((*))
