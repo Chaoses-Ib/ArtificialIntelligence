@@ -19,7 +19,7 @@ flowchart LR
 
 The **universal approximation theorem** states that a feedforward network with a linear output layer and at least one hidden layer with any “squashing” activation function (such as the logistic sigmoid activation function) can approximate any Borel measurable function from one ﬁnite-dimensional space to another with any desired nonzero amount of error, provided that the network is given enough hidden units. The derivatives of the feedforward network can also approximate the derivatives of the function arbitrarily well. A neural network may also approximate any function mapping from any ﬁnite dimensional discrete space to another.
 
-We are not guaranteed, however, that the training algorithm will be able to learn that function. Even if the MLP is able to represent the function, learning can fail for two diﬀerent reasons:
+We are not guaranteed, however, that the training algorithm will be able to learn that function. Even if the MLP is able to represent the function, learning can fail for two different reasons:
 - First, the optimization algorithm used for training may not be able to ﬁnd the value of the parameters that corresponds to the desired function.
 - Second, the training algorithm might choose the wrong function as a result of overﬁtting.
 

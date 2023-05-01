@@ -1,9 +1,11 @@
 # Recurrent Neural Networks
+[Wikipedia](https://en.wikipedia.org/wiki/Recurrent_neural_network)
+
 Recurrent neural networks are a family of neural networks for processing sequential data.
 
 Parameter sharing makes it possible to extend and apply the model to examples of different forms and generalize across them. The convolution operation allows a network to share parameters across time but is shallow. The output of convolution is a sequence where each member of the output is a function of a small number of neighboring members of the input. Recurrent networks share parameters in a different way. Each member of the output is a function of the previous members of the output. Each member of the output is produced using the same update rule applied to the previous outputs. This recurrent formulation results in the sharing of parameters through a very deep computational graph.
 
-Recurrent neural networks can be built in many diﬀerent ways. Much as almost any function can be considered a feedforward neural network, essentially any function involving recurrence can be considered a recurrent neural network.
+Recurrent neural networks can be built in many different ways. Much as almost any function can be considered a feedforward neural network, essentially any function involving recurrence can be considered a recurrent neural network.
 
 Many recurrent neural networks use the following equation or a similar equation to define the values of their hidden unit:
 $$h^{(t)}=f(h^{(t-1)},x^{(t)};\theta)$$
@@ -89,14 +91,27 @@ In this example, we see that at time $t = 2$, the model is trained to maximize t
 
 We originally motivated teacher forcing as allowing us to avoid back-propagation through time in models that lack hidden-to-hidden connections. Teacher forcing may still be applied to models that have hidden-to-hidden connections as long as they have connections from the output at one time step to values computed in the next time step. As soon as the hidden units become a function of earlier time steps, however, the BPTT algorithm is necessary. Some models may thus be trained with both teacher forcing and BPTT.
 
-The disadvantage of strict teacher forcing arises if the network is going to be later used in an open-loop mode, with the network outputs (or samples from the output distribution) fed back as input. In this case, the kind of inputs that the network sees during training could be quite diﬀerent from the kind of inputs that it will see at test time.[^deeplearning]
+The disadvantage of strict teacher forcing arises if the network is going to be later used in an open-loop mode, with the network outputs (or samples from the output distribution) fed back as input. In this case, the kind of inputs that the network sees during training could be quite different from the kind of inputs that it will see at test time.[^deeplearning]
 - One way to mitigate this problem is to train with both teacher-forced inputs and free-running inputs, for example by predicting the correct target a number of steps in the future through the unfolded recurrent output-to-input paths. In this way, the network can learn to take into account input conditions (such as those it generates itself in the free-running mode) not seen during training and how to map the state back toward one that will make the network generate proper outputs after a few steps.
 - Another approach to mitigate the gap between the inputs seen at training time and the inputs seen at test time randomly chooses to use generated values or actual data values as input. This approach exploits a curriculum learning strategy to gradually use more of the generated values as input.
 
-## Single output
+## Single-output
 Recurrent networks with recurrent connections between hidden units, that read an entire sequence and then produce a single output.
 
 ![](images/RNN-3.png)
+
+## Encoder-decoder sequence-to-sequence architectures
+[Wikipedia](https://en.wikipedia.org/wiki/Seq2seq)
+
+Hidden-to-hidden and output-to-hidden recurrent networks can map an input sequence to an output sequence of the same length. Single-output recurrent networks can map an input sequence to a fixed-size vector. Recurrent networks can also map a fixed-size vector to a sequence.
+
+To map an input sequence to an output sequence which is not necessarily of the same length, the simplest RNN architecture is the **encoder-decoder (sequence-to-sequence, seq2seq) architecture**:
+- An **encoder (reader, input)** RNN processes the input sequence $X=(x^{(1)},\cdots,x^{(n_x)})$ and emits the context $C$, which might be a vector or sequence of vectors and is usually a simple function of the encoder's final hidden state.
+- A **decoder (writer, output)** RNN is conditioned on that fixed-length vector to generate the output sequence $Y=(y^{(1)},\cdots,y^{(n_y)})$.
+
+In a sequence-to-sequence architecture, the two RNNs are trained jointly to maximize the average of log $P(y^{(1)},\cdots,y^{(n_y)}|x^{(1)},\cdots,x^{(n_x)})$ over all the pairs of $x$ and $y$ sequences in the training set.
+
+One clear limitation of this architecture is when the context $C$ output by the encoder RNN has a dimension that is too small to properly summarize a long sequence. Bahdanau et al. (2015) proposed to make $C$ a variable-length sequence rather than a ﬁxed-size vector. Additionally, they introduced an attention mechanism that learns to associate elements of the sequence $C$ to elements of the output sequence.
 
 
 [^deeplearning]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. _Deep Learning_. MIT Press, 2016.

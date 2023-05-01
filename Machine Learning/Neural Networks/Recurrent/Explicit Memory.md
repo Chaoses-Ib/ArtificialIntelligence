@@ -5,7 +5,7 @@ To resolve this diﬃculty, Weston et al. (2014) introduced **memory networks** 
 
 ![](images/NTM.png)
 
-Each memory cell can be thought of as an extension of the memory cells in LSTMs and GRUs. The diﬀerence is that the network outputs an internal state that chooses which cell to read from or write to, just as memory accesses in a digital computer read from or write to a speciﬁc address.
+Each memory cell can be thought of as an extension of the memory cells in LSTMs and GRUs. The difference is that the network outputs an internal state that chooses which cell to read from or write to, just as memory accesses in a digital computer read from or write to a speciﬁc address.
 
 Explicit memory seems to allow models to learn tasks that ordinary RNNs or LSTM RNNs cannot learn. One reason for this advantage may be that information and gradients can be propagated (forward in time or backward in time, respectively) for very long durations.
 

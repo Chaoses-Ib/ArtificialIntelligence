@@ -20,7 +20,7 @@ Convolution leverages three important ideas that can help improve a machine lear
 
   To say a function is equivariant means that if the input changes, the output changes in the same way. Speciﬁcally, a function $f(x)$ is equivariant to a function g if $f(g(x)) = g(f(x))$. In the case of convolution, if we let $g$ be any function that translates the input, that is, shifts it, then the convolution function is equivariant to $g$.
 
-  For example, when processing images, it is useful to detect edges in the ﬁrst layer of a convolutional network. The same edges appear more or less everywhere in the image, so it is practical to share parameters across the entire image.  In some cases, we may not wish to share parameters across the entire image. For example, if we are processing images that are cropped to be centered on an individual’s face, we probably want to extract diﬀerent features at diﬀerent locations—the part of the network processing the top of the face needs to look for eyebrows, while the part of the network processing the bottom of the face needs to look for a chin.
+  For example, when processing images, it is useful to detect edges in the ﬁrst layer of a convolutional network. The same edges appear more or less everywhere in the image, so it is practical to share parameters across the entire image.  In some cases, we may not wish to share parameters across the entire image. For example, if we are processing images that are cropped to be centered on an individual’s face, we probably want to extract different features at different locations—the part of the network processing the top of the face needs to look for eyebrows, while the part of the network processing the bottom of the face needs to look for a chin.
 
   Convolution is not naturally equivariant to some other transformations, such as changes in the scale or rotation of an image. Other mechanisms are necessary for handling these kinds of transformations.
 
@@ -65,7 +65,7 @@ A **pooling** function replaces the output of the net at a certain location with
 
 The use of pooling can be viewed as adding an inﬁnitely strong prior that the function the layer learns must be invariant to small translations. When this assumption is correct, it can greatly improve the statistical eﬃciency of the network.
 
-For many tasks, pooling is essential for handling inputs of varying size. For example, if we want to classify images of variable size, the input to the classiﬁcation layer must have a ﬁxed size. This is usually accomplished by varying the size of an oﬀset between pooling regions so that the classiﬁcation layer always receives the same number of summary statistics regardless of the input size.
+For many tasks, pooling is essential for handling inputs of varying size. For example, if we want to classify images of variable size, the input to the classiﬁcation layer must have a ﬁxed size. This is usually accomplished by varying the size of an offset between pooling regions so that the classiﬁcation layer always receives the same number of summary statistics regardless of the input size.
 
 Pooling 和 image scaling 都可以用于将图像转换到指定大小，两者在一定程度上是等价的。
 

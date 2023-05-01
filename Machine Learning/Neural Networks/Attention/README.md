@@ -10,7 +10,7 @@ Attention's flexibility comes from its role as "soft weights" that can change du
 We can think of an attention-based system as having three components[^deeplearning]:
 1. A process that **reads** raw data (such as source words in a source sentence) and converts them into distributed representations, with one feature vector associated with each word position.
 2. A list of feature vectors $h$ storing the output of the reader. This can be understood as a **memory** containing a sequence of facts, which can be retrieved later, not necessarily in the same order, without having to visit all of them.
-3. A process that **exploits** the content of the memory to sequentially perform a task, at each time step having the ability put attention on the content of one memory element (or a few, with a diﬀerent weight $a$).
+3. A process that **exploits** the content of the memory to sequentially perform a task, at each time step having the ability put attention on the content of one memory element (or a few, with a different weight $a$).
 
 ## Self-attention
 [What Is Attention in Language Models?](https://txt.cohere.com/what-is-attention-in-language-models/)

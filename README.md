@@ -13,6 +13,7 @@
 - [Residual Neural Networks](Machine%20Learning/Neural%20Networks/Residual/README.md)
 - [Convolutional Neural Networks](Machine%20Learning/Neural%20Networks/Convolutional/README.md) ([Python](Machine%20Learning/Neural%20Networks/Convolutional/README.ipynb))
 - [Recurrent Neural Networks](Machine%20Learning/Neural%20Networks/Recurrent/README.md)
+  - [Gated Recurrent Neural Networks](Machine%20Learning/Neural%20Networks/Recurrent/Gated/README.md)
   - [Explicit Memory](Machine%20Learning/Neural%20Networks/Recurrent/Explicit%20Memory.md)
 - [Recursive Neural Networks](Machine%20Learning/Neural%20Networks/Recursive/README.md)
 - Libraries
