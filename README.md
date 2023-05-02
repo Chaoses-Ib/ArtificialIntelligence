@@ -16,6 +16,7 @@
   - [Gated Recurrent Neural Networks](Machine%20Learning/Neural%20Networks/Recurrent/Gated/README.md)
   - [Explicit Memory](Machine%20Learning/Neural%20Networks/Recurrent/Explicit%20Memory.md)
 - [Recursive Neural Networks](Machine%20Learning/Neural%20Networks/Recursive/README.md)
+- [Autoencoders](Machine%20Learning/Neural%20Networks/Autoencoders/README.md)
 - Libraries
   - [PyTorch](Machine%20Learning/Neural%20Networks/PyTorch/README.md)
   - [MindSpore](Machine%20Learning/Neural%20Networks/MindSpore/README.md)
