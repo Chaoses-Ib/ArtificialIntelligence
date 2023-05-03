@@ -26,34 +26,6 @@ Sometimes, the loss function we actually care about is not one that can be optim
 
 A very important diﬀerence between optimization in general and optimization as we use it for training algorithms is that training algorithms do not usually halt at a local minimum. Instead, a machine learning algorithm usually minimizes a surrogate loss function but halts when a convergence criterion based on early stopping is satisﬁed. Typically the early stopping criterion is based on the true underlying loss function, such as 0-1 loss measured on a validation set, and is designed to cause the algorithm to halt whenever overﬁtting begins to occur. Training often halts while the surrogate loss function still has large derivatives, which is very diﬀerent from the pure optimization setting, where an optimization algorithm is considered to have converged when the gradient becomes very small.[^deeplearning]
 
-## Batch and minibatch algorithms
-One aspect of machine learning algorithms that separates them from general optimization algorithms is that the objective function usually decomposes as a sum over the training examples.
-
-$$J(\theta)=E_{(x,y)\sim \hat{p}_{data}} L(f(x;\theta),y)$$
-
-Computing this expectation exactly is very expensive because it requires evaluating the model on every example in the entire dataset. In practice, we can compute these expectations by randomly sampling a small number of examples from the dataset, then taking the average over only those examples:
-- Most optimization algorithms converge much faster (in terms of total computation, not in terms of number of updates) if they are allowed to rapidly compute approximate estimates of the gradient rather than slowly computing the exact gradient.
-- Another consideration motivating statistical estimation of the gradient from a small number of samples is redundancy in the training set.
-
-Optimization algorithms that use the entire training set are called **batch** or **deterministic** gradient methods, because they process all the training examples simultaneously in a large batch. This terminology can be somewhat confusing because the word “batch” is also often used to describe the minibatch used by minibatch stochastic gradient descent. Typically the term “batch gradient descent” implies the use of the full training set, while the use of the term “batch” to describe a group of examples does not. For example, it is common to use the term “batch size” to describe the size of a minibatch.
-
-Optimization algorithms that use only a single example at a time are sometimes called **stochastic** and sometimes **online** methods. The term “online” is usually reserved for when the examples are drawn from a stream of continually created examples rather than from a ﬁxed-size training set over which several passes are made.
-
-Most algorithms used for deep learning fall somewhere in between, using more than one but fewer than all the training examples. These were traditionally called **minibatch** or **minibatch stochastic** methods, and it is now common to call them simply **stochastic** methods.
-
-Minibatch sizes are generally driven by the following factors:
-- Larger batches provide a more accurate estimate of the gradient, but with less than linear returns.
-- Multicore architectures are usually underutilized by extremely small batches. This motivates using some absolute minimum batch size, below which there is no reduction in the time to process a minibatch.
--  If all examples in the batch are to be processed in parallel (as is typically the case), then the amount of memory scales with the batch size. For many hardware setups this is the limiting factor in batch size.
-- Some kinds of hardware achieve better runtime with speciﬁc sizes of arrays. Especially when using GPUs, it is common for power of 2 batch sizes to oﬀer better runtime. Typical power of 2 batch sizes range from 32 to 256, with 16 sometimes being attempted for large models.
-- Small batches can oﬀer a regularizing eﬀect, perhaps due to the noise they add to the learning process. Generalization error is often best for a batch size of $1$. Training with such a small batch size might require a small learning rate to maintain stability because of the high variance in the estimate of the gradient. The total runtime can be very high as a result of the need to make more steps, both because of the reduced learning rate and because it takes more steps to observe the entire training set.
-
-Diﬀerent kinds of algorithms use diﬀerent kinds of information from the minibatch in various ways. Some algorithms are more sensitive to sampling error than others, either because they use information that is diﬃcult to estimate accurately with few samples, or because they use information in ways that amplify sampling errors more. Methods that compute updates based only on the gradient $g$ are usually relatively robust and can handle smaller batch sizes, like $100$.
-
-It is also crucial that the minibatches be selected randomly. Computing an unbiased estimate of the expected gradient from a set of samples requires that those samples be independent. Many datasets are most naturally arranged in a way where successive examples are highly correlated. In cases where the order of the dataset holds some signiﬁcance, it is necessary to shuﬄe the examples before selecting minibatches.
-
-When using an extremely large training set, overﬁtting is not an issue, so underﬁtting and computational eﬃciency become the predominant concerns.[^deeplearning]
-
 ## Designing models to aid optimization
 To improve optimization, the best strategy is not always to improve the optimization algorithm. Instead, many improvements in the optimization of deep models have come from designing the models to be easier to optimize.
 
