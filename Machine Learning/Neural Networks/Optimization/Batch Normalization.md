@@ -1,4 +1,6 @@
 # Batch Normalization
+[Wikipedia](https://en.wikipedia.org/wiki/Batch_normalization)
+
 Very deep models involve the composition of several functions, or layers. The gradient tells how to update each parameter, under the assumption that the other layers do not change. In practice, we update all the layers simultaneously. When we make the update, unexpected results can happen because many functions composed together are changed simultaneously, using updates that were computed under the assumption that the other functions remain constant.
 
 Batch normalization provides an elegant way of reparametrizing almost any deep network. The reparametrization signiﬁcantly reduces the problem of coordinating updates across many layers. Batch normalization can be applied to any input or hidden layer in a network. Let $H$ be a minibatch of activations of the layer to normalize, arranged as a design matrix, with the activations for each example appearing in a row of the matrix. To normalize $H$, we replace it with
@@ -14,6 +16,8 @@ In a deep neural network with nonlinear activation functions, the lower layers c
 Because the ﬁnal layer of the network is able to learn a linear transformation, we may actually wish to remove all linear relationships between units within a layer. Unfortunately, eliminating all linear interactions is much more expensive than standardizing the mean and standard deviation of each individual unit, and so far batch normalization remains the most practical approach.
 
 Normalizing the mean and standard deviation of a unit can reduce the expressive power of the neural network containing that unit. To maintain the expressive power of the network, it is common to replace the batch of hidden unit activations $H$ with $\gamma H′ + \beta$ rather than simply the normalized $H'$. The variables $\gamma$ and $\beta$ are learned parameters that allow the new variable to have any mean and standard deviation. In the old parametrization, the mean of $H$ was determined by a complicated interaction between the parameters in the layers below $H$. In the new parametrization, the mean of $\gamma H′ + \beta$ is determined solely by $\beta$. The new parametrization is much easier to learn with gradient descent.
+
+The primary purpose of batch normalization is to improve optimization, but the noise can have a regularizing eﬀect, and sometimes makes dropout unnecessary.
 
 In convolutional networks, it is important to apply the same normalizing $\mu$ and $\sigma$ at every spatial location within a feature map, so that the statistics of the feature map remain the same regardless of spatial location.[^deeplearning]
 
