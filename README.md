@@ -18,6 +18,7 @@
 - [Recursive Neural Networks](Machine%20Learning/Neural%20Networks/Recursive/README.md)
 - [Autoencoders](Machine%20Learning/Neural%20Networks/Autoencoders/README.md)
 - [Optimization](Machine%20Learning/Neural%20Networks/Optimization/README.md)
+  - [Batch Normalization](Machine%20Learning/Neural%20Networks/Optimization/Batch%20Normalization.md)
 - [Regularization](Machine%20Learning/Neural%20Networks/Regularization/README.md)
   - [Dataset Augmentation](Machine%20Learning/Neural%20Networks/Regularization/Dataset%20Augmentation.md)
   - [Noise Injection](Machine%20Learning/Neural%20Networks/Regularization/Noise%20Injection.md)
