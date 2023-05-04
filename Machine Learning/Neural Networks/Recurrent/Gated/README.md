@@ -15,10 +15,10 @@ The LSTM cell internal state is updated as follows:
 
 $$s_i^{(t)} =
 f_i^{(t)} s_i^{(t-1)}
-+ g_i^{(t)}\sigma(b_i + \sum_j{U_{i,j}x_j^{(t)}}
++ g_i^{(t)}\text{tanh}(b_i + \sum_j{U_{i,j}x_j^{(t)}}
 + \sum_j{W_{i,j} h_j^{(t-1)}})$$
 
-where $b$, $U$ and $W$ respectively denote the biases, input weights, and recurrent weights into the LSTM cell.
+where $b$, $U$ and $W$ respectively denote the biases, input weights, and recurrent weights into the LSTM cell. 状态更新通常使用的是 $\text{tanh}$，但 Deep Learning[^deeplearning] 中使用的是 $\sigma$.
 
 The **forget gate** $f_i^{(t)}$ controlls the self-loop weight:
 $$f_i^{(t)}=

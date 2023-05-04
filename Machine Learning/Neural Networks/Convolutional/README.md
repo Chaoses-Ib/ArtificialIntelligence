@@ -3,11 +3,11 @@
 
 **Convolutional neural networks** are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers.
 
-We can imagine a convolutional net as being similar to a fully connected net, but with an **inﬁnitely strong prior** over its weights. This inﬁnitely strong prior says that the weights for one hidden unit must be identical to the weights of its neighbor but shifted in space. The prior also says that the weights must be zero, except for in the small, spatially contiguous receptive ﬁeld assigned to that hidden unit. Overall, we can think of the use of convolution as introducing an inﬁnitely strong prior probability distribution over the parameters of a layer. This prior says that the function the layer should learn contains only local interactions and is equivariant to translation. Likewise, the use of pooling is an inﬁnitely strong prior that each unit should be invariant to small translations.
+We can imagine a convolutional net as being similar to a fully connected net, but with an **inﬁnitely strong prior** over its weights. This inﬁnitely strong prior says that the weights for one hidden unit must be identical to the weights of its neighbor but shifted in space. The prior also says that the weights must be zero, except for in the small, spatially contiguous receptive ﬁeld assigned to that hidden unit. Overall, we can think of the use of convolution as introducing an inﬁnitely strong prior probability distribution over the parameters of a layer. This prior says that the function the layer should learn contains only local interactions and is equivariant to translation. Likewise, the use of pooling is an inﬁnitely strong prior that each unit should be invariant to small translations.[^deeplearning]
 
-CNN 适用于具有 grid-like topology 的数据，例如 time-series data 和 image data。
+CNN 适用于具有 grid-like topology 的数据，例如 time-series data 和 image data，也可以应用于某些 NLP 任务和棋类游戏。
 
-Convolution leverages three important ideas that can help improve a machine learning system[^deeplearning]:
+Convolution leverages three important ideas that can help improve a machine learning system:
 - Sparse interactions (sparse connectivity, sparse weights)
 
   This means that we need to store fewer parameters, which both reduces the memory requirements of the model and improves its statistical eﬃciency. It also means that computing the output requires fewer operations.
@@ -26,7 +26,7 @@ Convolution leverages three important ideas that can help improve a machine lear
 
 Moreover, convolution provides a means for working with inputs of variable size.
 
-We should only compare convolutional models to other convolutional models in benchmarks of statistical learning performance. Models that do not use convolution would be able to learn even if we permuted all the pixels in the image.
+We should only compare convolutional models to other convolutional models in benchmarks of statistical learning performance. Models that do not use convolution would be able to learn even if we permuted all the pixels in the image.[^deeplearning]
 
 ## Convolution
 Given $x(t)$, the convolution operation is
@@ -93,6 +93,8 @@ flowchart TD
     classDef dense fill:#fcef4f,color:#000;
 ```
 
+LeNet-5 有 7 层而不是 5 层，它名称中的“5”可能是来自于卷积核的大小。
+
 PyTorch:
 - [Writing LeNet5 from Scratch in PyTorch](https://blog.paperspace.com/writing-lenet5-from-scratch-in-python/)
 - [7.6. Convolutional Neural Networks (LeNet) — Dive into Deep Learning 1.0.0-beta0 documentation](https://d2l.ai/chapter_convolutional-neural-networks/lenet.html)
@@ -143,6 +145,8 @@ flowchart RL
     classDef pool fill:#f7cffc,color:#000;
     classDef dense fill:#fcef4f,color:#000;
 ```
+
+AlexNet 共有 11 层，相比 LeNet-5 多了中间 4 层。
 
 PyTorch:
 - [Image-Recognition-on-MNIST-dataset/AlexNet.ipynb](https://github.com/l5shi/Image-Recognition-on-MNIST-dataset/blob/master/AlexNet.ipynb)

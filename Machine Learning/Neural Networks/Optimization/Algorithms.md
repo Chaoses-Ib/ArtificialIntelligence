@@ -36,7 +36,11 @@ When using an extremely large training set, overﬁtting is not an issue, so und
 
 ![](images/SGD.png)
 
-### Learning rates
+To study the convergence rate of an optimization algorithm it is common to measure the excess error $J(\theta) − \text{min}_\theta {J(\theta)}$, which is the amount by which the current cost function exceeds the minimum possible cost. When SGD is applied to a convex problem, the excess error is $O({1\over\sqrt k})$ after $k$ iterations, while in the strongly convex case, it is $O({1\over k})$. These bounds cannot be improved unless extra conditions are assumed. Batch gradient descent enjoys better convergence rates than stochastic gradient descent in theory. However, the Cramér-Rao bound states that generalization error cannot decrease faster than $O({1\over k})$. Bottou and Bousquet (2008) argue that it therefore may not be worthwhile to pursue an optimization algorithm that converges faster than $O({1\over k})$ for machine learning tasks—faster convergence presumably corresponds to overﬁtting.
+
+Moreover, the asymptotic analysis obscures many advantages that stochastic gradient descent has after a small number of steps. With large datasets, the ability of SGD to make rapid initial progress while evaluating the gradient for very few examples outweighs its slow asymptotic convergence. One can also trade oﬀ the beneﬁts of both batch and stochastic gradient descent by gradually increasing the minibatch size during the course of learning.[^deeplearning]
+
+## Learning rate decay
 A crucial parameter for the SGD algorithm is the **learning rate**. In practice, it is necessary to gradually decrease the learning rate over time, so we denote the learning rate at iteration $k$ as $\epsilon_k$. This is because the SGD gradient estimator introduces a source of noise (the random sampling of m training examples) that does not vanish even when we arrive at a minimum. By comparison, the true gradient of the total cost function becomes small and then $0$ when we approach and reach a minimum using batch gradient descent, so batch gradient descent can use a ﬁxed learning rate. A suﬃcient condition to guarantee convergence of SGD is that
 
 $$\begin{align}
@@ -50,27 +54,33 @@ $$\epsilon_k=(1-a)\epsilon_0+a\epsilon_\tau$$
 
 with $a={k\over\tau}$. After iteration $\tau$, it is common to leave $\epsilon$ constant.
 
-When using the linear schedule, the parameters to choose are $\epsilon_0$, $\epsilon_\tau$, and $\tau$. Usually $\tau$ may be set to the number of iterations required to make a few hundred passes through the training set. Usually $\epsilon_\tau$ should be set to roughly $1$ percent the value of $\epsilon_0$. The main question is how to set $\epsilon_0$. If it is too large, the learning curve will show violent oscillations, with the cost function often increasing signiﬁcantly. Gentle oscillations are ﬁne, especially if training with a stochastic cost function, such as the cost function arising from the use of dropout. If the learning rate is too low, learning proceeds slowly, and if the initial learning rate is too low, learning may become stuck with a high cost value.
+When using the linear schedule, the parameters to choose are $\epsilon_0$, $\epsilon_\tau$, and $\tau$. Usually $\tau$ may be set to the number of iterations required to make a few hundred passes through the training set. Usually $\epsilon_\tau$ should be set to roughly $1$ percent the value of $\epsilon_0$. The main question is how to set $\epsilon_0$. If it is too large, the learning curve will show violent oscillations, with the cost function often increasing signiﬁcantly. Gentle oscillations are ﬁne, especially if training with a stochastic cost function, such as the cost function arising from the use of dropout. If the learning rate is too low, learning proceeds slowly, and if the initial learning rate is too low, learning may become stuck with a high cost value.[^deeplearning]
 
-The learning rate may be chosen by trial and error, but it is usually best to choose it by monitoring learning curves that plot the objective function as a function of time. Typically, the optimal initial learning rate, in terms of total training time and the ﬁnal cost value, is higher than the learning rate that yields the best performance after the ﬁrst 100 iterations or so. Therefore, it is usually best to monitor the ﬁrst several iterations and use a learning rate that is higher than the best-performing learning rate at this time, but not so high that it causes severe instability. This is more of an art than a science, and most guidance on this subject should be regarded with some skepticism.
+![](images/learning-rate-decay.png)
 
-To study the convergence rate of an optimization algorithm it is common to measure the excess error $J(\theta) − \text{min}_\theta {J(\theta)}$, which is the amount by which the current cost function exceeds the minimum possible cost. When SGD is applied to a convex problem, the excess error is $O({1\over\sqrt k})$ after $k$ iterations, while in the strongly convex case, it is $O({1\over k})$. These bounds cannot be improved unless extra conditions are assumed. Batch gradient descent enjoys better convergence rates than stochastic gradient descent in theory. However, the Cramér-Rao bound states that generalization error cannot decrease faster than $O({1\over k})$. Bottou and Bousquet (2008) argue that it therefore may not be worthwhile to pursue an optimization algorithm that converges faster than $O({1\over k})$ for machine learning tasks—faster convergence presumably corresponds to overﬁtting.
+- Linear decay
 
-Moreover, the asymptotic analysis obscures many advantages that stochastic gradient descent has after a small number of steps. With large datasets, the ability of SGD to make rapid initial progress while evaluating the gradient for very few examples outweighs its slow asymptotic convergence. One can also trade oﬀ the beneﬁts of both batch and stochastic gradient descent by gradually increasing the minibatch size during the course of learning.[^deeplearning]
+  $$\eta_t=(1-t)\eta_0+t\eta_\tau$$
+- Piecewise constant decay (step decay)
+- Inverse time decay
 
-## Momentum
-The method of momentum is designed to accelerate learning, especially in the face of high curvature, small but consistent gradients, or noisy gradients. The momentum algorithm accumulates an exponentially decaying moving average of past gradients and continues to move in their direction.
+  $$\eta_t=\eta_0 {1\over 1+\beta t}$$
+- Exponential decay
 
-![](images/Momentum.png)
+  $$\eta_t=\eta_0 \beta^t$$
+- Natural exponential decay
 
-Common values of $a$ used in practice include $0.5$, $0.9$, and $0.99$. Like the learning rate, $a$ may also be adapted over time. Typically it begins with a small value and is later raised. Adapting $a$ over time is less important than shrinking $\epsilon$ over time.[^deeplearning]
+  $$\eta_t=\eta_0 e^{-\beta t}$$
+- Cosine decay
 
-### Nesterov momentum
-![](images/NesterovMomentum.png)
+  $$\eta_t={1\over 2}\eta_0(1+\cos{t\pi \over \tau})$$
 
-The diﬀerence between Nesterov momentum and standard momentum is where the gradient is evaluated. With Nesterov momentum, the gradient is evaluated after the current velocity is applied. Thus one can interpret Nesterov momentum as attempting to add a correction factor to the standard method of momentum.
+The learning rate may be chosen by trial and error, but it is usually best to choose it by monitoring learning curves that plot the objective function as a function of time. Typically, the optimal initial learning rate, in terms of total training time and the ﬁnal cost value, is higher than the learning rate that yields the best performance after the ﬁrst 100 iterations or so. Therefore, it is usually best to monitor the ﬁrst several iterations and use a learning rate that is higher than the best-performing learning rate at this time, but not so high that it causes severe instability. This is more of an art than a science, and most guidance on this subject should be regarded with some skepticism.[^deeplearning]
 
-In the convex batch gradient case, Nesterov momentum brings the rate of convergence of the excess error from $O({1\over k})$ (after $k$ steps) to $O({1\over k^2})$. Unfortunately, in the stochastic gradient case, Nesterov momentum does not improve the rate of convergence.[^deeplearning]
+## Periodic learning rates
+- Cyclic learning rates
+  - Triangular cyclic learning rates
+- Stochastic gradient descent with warm restarts
 
 ## Algorithms with adaptive learning rates
 Neural network researchers have long realized that the learning rate is reliably one of the most diﬃcult to set hyperparameters because it signiﬁcantly aﬀects model performance. The cost is often highly sensitive to some directions in parameter space and insensitive to others. The momentum algorithm can mitigate these issues somewhat, but it does so at the expense of introducing another hyperparameter. In the face of this, it is natural to ask if there is another way. If we believe that the directions of sensitivity are somewhat axis aligned, it can make sense to use a separate learning rate for each parameter and automatically adapt these learning rates throughout the course of learning.
@@ -100,6 +110,20 @@ Empirically, RMSProp has been shown to be an eﬀective and practical optimizati
 ![](images/Adam.png)
 
 Adam is generally regarded as being fairly robust to the choice of hyperparameters, though the learning rate sometimes needs to be changed from the suggested default.[^deeplearning]
+
+## Momentum
+The method of momentum is designed to accelerate learning, especially in the face of high curvature, small but consistent gradients, or noisy gradients. The momentum algorithm accumulates an exponentially decaying moving average of past gradients and continues to move in their direction.
+
+![](images/Momentum.png)
+
+Common values of $a$ used in practice include $0.5$, $0.9$, and $0.99$. Like the learning rate, $a$ may also be adapted over time. Typically it begins with a small value and is later raised. Adapting $a$ over time is less important than shrinking $\epsilon$ over time.[^deeplearning]
+
+### Nesterov momentum
+![](images/NesterovMomentum.png)
+
+The diﬀerence between Nesterov momentum and standard momentum is where the gradient is evaluated. With Nesterov momentum, the gradient is evaluated after the current velocity is applied. Thus one can interpret Nesterov momentum as attempting to add a correction factor to the standard method of momentum.
+
+In the convex batch gradient case, Nesterov momentum brings the rate of convergence of the excess error from $O({1\over k})$ (after $k$ steps) to $O({1\over k^2})$. Unfortunately, in the stochastic gradient case, Nesterov momentum does not improve the rate of convergence.[^deeplearning]
 
 
 [^deeplearning]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. _Deep Learning_. MIT Press, 2016.

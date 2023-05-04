@@ -1,4 +1,6 @@
-# [Feed-forward Neural Networks](https://en.wikipedia.org/wiki/Feedforward_neural_network)
+# Feed-forward Neural Networks
+[Wikipedia](https://en.wikipedia.org/wiki/Feedforward_neural_network)
+
 Function:
 $$z_k=h(\sum_j {w_{kj} z_j})$$
 Biases can be included in this sum by introducing an extra unit, or input, with activation fixed at $1$. We therefore do not need to deal with biases explicitly.[^prml]
@@ -33,8 +35,11 @@ $$\delta_j = h'(a_j) \sum_k w_{kj} \delta_k$$
 Therefore
 $${\partial E_n \over \partial w_{ji}} = h'(a_j) z_i \sum_k w_{kj} \delta_k$$
 
+[Principles of training multi-layer neural network using backpropagation](http://galaxy.agh.edu.pl/~vlsi/AI/backp_t_en/backprop.html)
+
 ## Implementations
 PyTorch:
 - [Feedforward Neural Networks (FNN) - Deep Learning Wizard](https://www.deeplearningwizard.com/deep_learning/practical_pytorch/pytorch_feedforward_neuralnetwork/#summary)
 
-[^prml]: Pattern Recognition and Machine Learning
+
+[^prml]: Bishop, Christopher M., and Nasser M. Nasrabadi. Pattern Recognition and Machine Learning. Vol. 4. 4. Springer, 2006.

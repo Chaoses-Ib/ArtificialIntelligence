@@ -1,4 +1,13 @@
-# Batch Normalization
+# Normalization
+![](images/norms.png)
+
+where each subplot shows a feature map tensor, with $N$ as the batch axis, $C$ as the channel axis, and $(H, W)$ as the spatial axes. The pixels in blue are normalized by the same mean and variance, computed by aggregating the values of these pixels.[^group]
+
+[machine learning - Why do transformers use layer norm instead of batch norm? - Cross Validated](https://stats.stackexchange.com/questions/474440/why-do-transformers-use-layer-norm-instead-of-batch-norm)
+
+[machine learning - Instance Normalisation vs Batch normalisation - Stack Overflow](https://stackoverflow.com/questions/45463778/instance-normalisation-vs-batch-normalisation)
+
+## Batch normalization
 [Wikipedia](https://en.wikipedia.org/wiki/Batch_normalization)
 
 Very deep models involve the composition of several functions, or layers. The gradient tells how to update each parameter, under the assumption that the other layers do not change. In practice, we update all the layers simultaneously. When we make the update, unexpected results can happen because many functions composed together are changed simultaneously, using updates that were computed under the assumption that the other functions remain constant.
@@ -21,5 +30,16 @@ The primary purpose of batch normalization is to improve optimization, but the n
 
 In convolutional networks, it is important to apply the same normalizing $\mu$ and $\sigma$ at every spatial location within a feature map, so that the statistics of the feature map remain the same regardless of spatial location.[^deeplearning]
 
+## Layer normalization
+Batch normalization uses the distribution of the summed input to a neuron over a mini-batch of training cases to compute a mean and variance which are then used to normalize the summed input to that neuron on each training case. This signiﬁcantly reduces the training time in feed-forward neural networks. However, the effect of batch normalization is dependent on the mini-batch size and it is not obvious how to apply it to recurrent neural networks. We transpose batch normalization into **layer normalization** by computing the mean and variance used for normalization from all of the summed inputs to the neurons in a layer on a single training case. 
+
+Like batch normalization, we also give each neuron its own adaptive bias and gain which are applied after the normalization but before the non-linearity. Unlike batch normalization, layer normalization performs exactly the same computation at training and test times. It is also straightforward to apply to recurrent neural networks by computing the normalization statistics separately at each time step. Layer normalization is very effective at stabilizing the hidden state dynamics in recurrent networks. Empirically, we show that layer normalization can substantially reduce the training time compared with previously published techniques.[^layer]
+
+## Instance normalization
+
+## Weight normalization
+
 
 [^deeplearning]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. _Deep Learning_. MIT Press, 2016.
+[^group]: Wu, Yuxin, and Kaiming He. “Group Normalization.” arXiv, June 11, 2018. [https://doi.org/10.48550/arXiv.1803.08494](https://doi.org/10.48550/arXiv.1803.08494).
+[^layer]: Ba, Jimmy Lei, Jamie Ryan Kiros, and Geoffrey E. Hinton. “Layer Normalization.” arXiv, July 21, 2016. [https://doi.org/10.48550/arXiv.1607.06450](https://doi.org/10.48550/arXiv.1607.06450).
