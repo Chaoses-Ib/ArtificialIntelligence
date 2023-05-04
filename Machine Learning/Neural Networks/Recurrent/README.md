@@ -69,6 +69,12 @@ $$\begin{align}
 
 Computing the gradient of this loss function with respect to the parameters is an expensive operation. The gradient computation involves performing a forward propagation pass moving left to right through the unrolled graph, followed by a backward propagation pass moving right to left through the graph. The runtime is $O(\tau)$ and cannot be reduced by parallelization because the forward propagation graph is inherently sequential; each time step may be computed only after the previous one. States computed in the forward pass must be stored until they are reused during the backward pass, so the memory cost is also $O(\tau)$. The back-propagation algorithm applied to the unrolled graph with $O(\tau)$ cost is called **back-propagation through time (BPTT)**.[^deeplearning]
 
+Example:
+
+![](images/hidden-to-hidden.png)
+
+$$Y=\{[4,4]',[12,12]',[32,32]'\}$$
+
 ## Output-to-hidden
 Recurrent networks that produce an output at each time step and have recurrent connections only from the output at one time step to the hidden units at the next time step.
 

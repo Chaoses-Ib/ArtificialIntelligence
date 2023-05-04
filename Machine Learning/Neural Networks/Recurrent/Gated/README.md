@@ -65,7 +65,9 @@ r_i^{(t)}&=
 + \sum_j{W_{i,j}^r h_j^{(t-1)}})
 \end{align}$$
 
-The reset and update gates can individually “ignore” parts of the state vector. The **update gates** act like conditional leaky integrators that can linearly gate any dimension, thus choosing to copy it (at one extreme of the sigmoid) or completely ignore it (at the other extreme) by replacing it with the new “target state” value (toward which the leaky integrator wants to converge). The **reset gates** control which parts of the state get used to compute the next target state, introducing an additional nonlinear effect in the relationship between past state and future state.
+The reset and update gates can individually “ignore” parts of the state vector. The **update gates** act like conditional leaky integrators that can linearly gate any dimension, thus choosing to copy it (at one extreme of the sigmoid) or completely ignore it (at the other extreme) by replacing it with the new “target state” value (toward which the leaky integrator wants to converge). The **reset gates** control which parts of the state get used to compute the next target state, introducing an additional nonlinear effect in the relationship between past state and future state.[^deeplearning]
+
+GRU 中的 update gate 相当于 LSTM 中的 forget gate，$1 - \text{update gate}$ 相当于 input gate，reset gate 相当于 output gate。
 
 Many more variants around this theme can be designed. For example the reset gate (or forget gate) output could be shared across multiple hidden units. Alternately, the product of a global gate (covering a whole group of units, such as an entire layer) and a local gate (per unit) could be used to combine global control and local control. Several investigations over architectural variations of the LSTM and GRU, however, found no variant that would clearly beat both of these across a wide range of tasks. Greff et al. (2015) found that a crucial ingredient is the forget gate, while Jozefowicz et al. (2015) found that adding a bias of $1$ to the LSTM forget gate, a practice advocated by Gers et al. (2000), makes the LSTM as strong as the best of the explored architectural variants.[^deeplearning]
 

@@ -43,13 +43,19 @@ Convolution is commutative, meaning we can equivalently write
 
 $$S(i,j)=(K\ast I)(i,j)=\sum_m\sum_n I(i-m,j-n)K(m,n)$$
 
-The commutative property of convolution arises because we have **ﬂipped** the kernel relative to the input, in the sense that as $m$ increases, the index into the input increases, but the index into the kernel decreases. While the commutative property is useful for writing proofs, it is not usually an important property of a neural network implementation. Instead, many neural network libraries implement a related function called the **cross-correlation (often called convolution)**, which is the same as convolution but without ﬂipping the kernel:
+The commutative property of convolution arises because we have **ﬂipped** the kernel relative to the input, in the sense that as $m$ increases, the index into the input increases, but the index into the kernel decreases. While the commutative property is useful for writing proofs, it is not usually an important property of a neural network implementation. Instead, many neural network libraries implement a related function called the **cross-correlation (often called convolution)**, which is the same as convolution but without ﬂipping the kernel:[^deeplearning]
 
 $$S(i,j)=(I\ast K)(i,j)=\sum_m\sum_n I(i+m,j+n)K(m,n)$$
 
-Discrete convolution can be viewed as multiplication by a matrix, but the matrix has several entries constrained to be equal to other entries. For example, for univariate discrete convolution, each row of the matrix is constrained to be equal to the row above shifted by one element. This is known as a **Toeplitz matrix**. In two dimensions, a **doubly block circulant matrix** corresponds to convolution.[^deeplearning]
+卷积结果的尺寸：
 
 $$N_\text{output}={N_\text{inputs} + 2N_\text{padding} - N_\text{kernel} \over \text{stride} } + 1$$
+
+![](images/conv.gif)
+
+上图本质上是一个三维卷积，但由于第三个维度 channel 通常较小，一般会将这样的卷积当成多个二维卷积来进行计算。除了上图中的算法外，也可以先将 input 的每个 channel 与 kernel 进行卷积，将得到的矩阵相加，再加上 $bI$ 。
+
+Discrete convolution can be viewed as multiplication by a matrix, but the matrix has several entries constrained to be equal to other entries. For example, for univariate discrete convolution, each row of the matrix is constrained to be equal to the row above shifted by one element. This is known as a **Toeplitz matrix**. In two dimensions, a **doubly block circulant matrix** corresponds to convolution.[^deeplearning]
 
 ## Pooling
 ```mermaid
@@ -94,6 +100,12 @@ flowchart TD
 ```
 
 LeNet-5 有 7 层而不是 5 层，它名称中的“5”可能是来自于卷积核的大小。
+
+The connection table of C3 layer in LeNet-5:
+
+![](images/lenet-5-table.png)
+
+If we do not use the connection table, we will need $96$ $5\times 5$ kernels in C3 layer.
 
 PyTorch:
 - [Writing LeNet5 from Scratch in PyTorch](https://blog.paperspace.com/writing-lenet5-from-scratch-in-python/)
