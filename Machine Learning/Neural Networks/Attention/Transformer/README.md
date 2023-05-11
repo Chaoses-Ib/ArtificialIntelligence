@@ -14,5 +14,7 @@
 - 2023-03-30 [Token Merging for Fast Stable Diffusion](https://github.com/dbolya/tomesd)
   - [ToMe extension for Stable Diffusion A1111 WebUI](https://github.com/SLAPaper/a1111-sd-webui-tome)
 
+    在图像尺寸较小时会导致性能降低。
+
 
 [^allyouneed]: Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. “Attention Is All You Need.” arXiv, December 5, 2017. [https://doi.org/10.48550/arXiv.1706.03762](https://doi.org/10.48550/arXiv.1706.03762).

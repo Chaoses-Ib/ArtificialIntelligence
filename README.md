@@ -35,6 +35,10 @@
   - [PyTorch](Machine%20Learning/Neural%20Networks/PyTorch/README.md)
   - [MindSpore](Machine%20Learning/Neural%20Networks/MindSpore/README.md)
 
+## [Symbolic Artificial Intelligence](Symbolic/README.md)
+- [→Logic](https://github.com/Chaoses-Ib/Mathematics#logic)
+- [Knowledge-based Agents](Symbolic/Knowledge-based%20Agents.md)
+
 ## [Natural Language Processing](NLP/README.md)
 - [Datasets](NLP/Datasets.md)
 - [Text Segmentation](NLP/Text%20Segmentation/README.md)
