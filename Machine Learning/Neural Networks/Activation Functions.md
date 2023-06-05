@@ -1,5 +1,5 @@
 # Activation Functions
-In modern neural networks, the default recommendation is to use the rectiﬁed linear unit.[^deeplearning]
+In modern neural networks, the default recommendation is to use the rectified linear unit.[^deeplearning]
 
 ## [→Logistic function](https://github.com/Chaoses-Ib/Mathematics/blob/main/Analysis/Functions/Logistic%20Function.md)
 $$f(x)={L \over 1+e^{-k}(x-x_0)}$$

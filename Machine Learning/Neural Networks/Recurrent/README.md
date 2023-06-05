@@ -82,7 +82,7 @@ Recurrent networks that produce an output at each time step and have recurrent c
 
 The recurrent network of this type is strictly less powerful because it lacks hidden-to-hidden recurrent connections. For example, it cannot simulate a universal Turing machine. Because this network lacks hidden-to-hidden recurrence, it requires that the output units capture all the information about the past that the network will use to predict the future. Because the output units are explicitly trained to match the training set targets, they are unlikely to capture the necessary information about the past history of the input, unless the user knows how to describe the full state of the system and provides it as part of the training set targets.
 
-The advantage of eliminating hidden-to-hidden recurrence is that, for any loss function based on comparing the prediction at time $t$ to the training target at time $t$, all the time steps are decoupled. Training can thus be parallelized, with the gradient for each step $t$ computed in isolation. There is no need to compute the output for the previous time step ﬁrst, because the training set provides the ideal value of that output.
+The advantage of eliminating hidden-to-hidden recurrence is that, for any loss function based on comparing the prediction at time $t$ to the training target at time $t$, all the time steps are decoupled. Training can thus be parallelized, with the gradient for each step $t$ computed in isolation. There is no need to compute the output for the previous time step first, because the training set provides the ideal value of that output.
 
 Models that have recurrent connections from their outputs leading back into the model may be trained with **teacher forcing**. Teacher forcing is a procedure that emerges from the maximum likelihood criterion, in which during training the model receives the ground truth output $y^{(t)}$ as input at time $t+1$. We can see this by examining a sequence with two time steps. The conditional maximum likelihood criterion is
 
@@ -91,7 +91,7 @@ $$\begin{align}
 &=\log {p(y^{(2)} | y^{(1)},x^{(1)},x^{(2)})} + \log {p(y^{(1)} | x^{(1)},x^{(2)})}
 \end{align}$$
 
-In this example, we see that at time $t = 2$, the model is trained to maximize the conditional probability of $y^{(2)}$ given both the $x$ sequence so far and the previous $y$ value from the training set. Maximum likelihood thus speciﬁes that during training, rather than feeding the model’s own output back into itself, these connections should be fed with the target values specifying what the correct output should be.
+In this example, we see that at time $t = 2$, the model is trained to maximize the conditional probability of $y^{(2)}$ given both the $x$ sequence so far and the previous $y$ value from the training set. Maximum likelihood thus specifies that during training, rather than feeding the model’s own output back into itself, these connections should be fed with the target values specifying what the correct output should be.
 
 ![](images/teacher-forcing.png)
 
@@ -117,7 +117,7 @@ To map an input sequence to an output sequence which is not necessarily of the s
 
 In a sequence-to-sequence architecture, the two RNNs are trained jointly to maximize the average of log $P(y^{(1)},\cdots,y^{(n_y)}|x^{(1)},\cdots,x^{(n_x)})$ over all the pairs of $x$ and $y$ sequences in the training set.
 
-One clear limitation of this architecture is when the context $C$ output by the encoder RNN has a dimension that is too small to properly summarize a long sequence. Bahdanau et al. (2015) proposed to make $C$ a variable-length sequence rather than a ﬁxed-size vector. Additionally, they introduced an attention mechanism that learns to associate elements of the sequence $C$ to elements of the output sequence.
+One clear limitation of this architecture is when the context $C$ output by the encoder RNN has a dimension that is too small to properly summarize a long sequence. Bahdanau et al. (2015) proposed to make $C$ a variable-length sequence rather than a fixed-size vector. Additionally, they introduced an attention mechanism that learns to associate elements of the sequence $C$ to elements of the output sequence.
 
 
 [^deeplearning]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. _Deep Learning_. MIT Press, 2016.

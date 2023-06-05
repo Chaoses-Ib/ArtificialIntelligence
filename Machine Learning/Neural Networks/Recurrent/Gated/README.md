@@ -44,6 +44,12 @@ Among the variants, one can choose to use the cell state $s_i^{(t)}$ as an extra
 
 LSTM networks have been shown to learn long-term dependencies more easily than the simple recurrent architecture. The LSTM has been found extremely successful in many applications.[^deeplearning]
 
+Examples:
+- [pytorch-nlp-tutorial/sequence_classification_lstm.ipynb](https://github.com/epochx/pytorch-nlp-tutorial/blob/master/sequence_classification_lstm.ipynb)
+
+Attention:
+- [Attention in Long Short-Term Memory Recurrent Neural Networks - MachineLearningMastery.com](https://machinelearningmastery.com/attention-long-short-term-memory-recurrent-neural-networks/)
+
 ## Gated recurrent units
 [Wikipedia](https://en.wikipedia.org/wiki/Gated_recurrent_unit)
 
@@ -54,7 +60,7 @@ u_i^{(t-1)} h_i^{(t-1)}
 + (1-u_i^{(t-1)})\sigma(b_i + \sum_j{U_{i,j}x_j^{(t-1)}}
 + \sum_j{W_{i,j} r_j^{(t-1)} h_j^{(t-1)}})$$
 
-where $u$ stands for **update gate** and $r$ for **reset gate**. Their value is deﬁned as usual:
+where $u$ stands for **update gate** and $r$ for **reset gate**. Their value is defined as usual:
 
 $$\begin{align}
 u_i^{(t)}&=

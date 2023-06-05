@@ -2,6 +2,7 @@
 [GitHub](https://github.com/pytorch/pytorch)
 
 [PyTorch documentation](https://pytorch.org/docs/stable/index.html)
+- [PyTorch 2.0](https://pytorch.org/get-started/pytorch-2.0/)
 
 Tutorials:
 - [PyTorch Tutorials](https://pytorch.org/tutorials/)

@@ -17,7 +17,7 @@ One way to obtain useful features from the autoencoder is to constrain $h$ to ha
 The learning process is described simply as minimizing a loss function
 $$L(x,g(f(x)))$$
 
-When the decoder is linear and $L$ is the mean squared error, an undercomplete autoencoder learns to span the same subspace as PCA. In this case, an autoencoder trained to perform the copying task has learned the principal subspace of the training data as a side eﬀect.[^deeplearning]
+When the decoder is linear and $L$ is the mean squared error, an undercomplete autoencoder learns to span the same subspace as PCA. In this case, an autoencoder trained to perform the copying task has learned the principal subspace of the training data as a side effect.[^deeplearning]
 
 ## Regularized autoencoders
 Rather than limiting the model capacity by keeping the encoder and decoder shallow and the code size small, regularized autoencoders use a loss function that encourages the model to have other properties besides the ability to copy its input to its output. These other properties include:
@@ -31,7 +31,7 @@ In addition to the methods described here, which are most naturally interpreted 
 A sparse autoencoder is simply an autoencoder whose training criterion involves a sparsity penalty $\Omega(h)$ on the code layer $h$, in addition to the reconstruction error:
 $$L(x,g(f(x)))+\Omega(h)$$
 
-Sparse autoencoders are typically used to learn features for another task, such as classiﬁcation.[^deeplearning]
+Sparse autoencoders are typically used to learn features for another task, such as classification.[^deeplearning]
 
 ### Denoising autoencoders
 Rather than adding a penalty $\Omega$ to the cost function, we can obtain an autoencoder that learns something useful by changing the reconstruction error term of the cost function.

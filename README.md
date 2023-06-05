@@ -22,7 +22,7 @@
   - [Optimization Algorithms](Machine%20Learning/Neural%20Networks/Optimization/Algorithms.md)
   - [Normalization](Machine%20Learning/Neural%20Networks/Optimization/Normalization.md)
 - [Regularization](Machine%20Learning/Neural%20Networks/Regularization/README.md)
-  - [Dataset Augmentation](Machine%20Learning/Neural%20Networks/Regularization/Dataset%20Augmentation.md)
+  - [Data Augmentation](Machine%20Learning/Neural%20Networks/Regularization/Data%20Augmentation.md)
   - [Noise Injection](Machine%20Learning/Neural%20Networks/Regularization/Noise%20Injection.md)
   - [Semi-supervised Learning](Machine%20Learning/Neural%20Networks/Regularization/Semi-supervised%20Learning.md)
   - [Parameter Norm Penalties](Machine%20Learning/Neural%20Networks/Regularization/Parameter%20Norm%20Penalties.md)
@@ -52,6 +52,8 @@
   - [基于潜在狄利克雷分配模型的语义搜索方法](NLP/Topic%20Modeling/基于潜在狄利克雷分配模型的语义搜索方法/Paper.pdf) ([Slide](NLP/Topic%20Modeling/基于潜在狄利克雷分配模型的语义搜索方法/Slide.pdf))
 - [Text Search](NLP/Text%20Search.md)
 - [Chatbots](NLP/Chatbots.md)
+- Regularization
+  - [Text Data Augmentation](NLP/Regularization/Data%20Augmentation.md)
 
 ## [→Visual Computing](https://github.com/Chaoses-Ib/VisualComputing)
 - [→Computer Vision](https://github.com/Chaoses-Ib/VisualComputing#computer-vision)
