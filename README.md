@@ -40,6 +40,8 @@
 - [Knowledge-based Agents](Symbolic/Knowledge-based%20Agents.md)
 
 ## [Natural Language Processing](NLP/README.md)
+- [Character Encoding](NLP/Encoding/README.md)
+  - [Unicode](NLP/Encoding/Unicode/README.md)
 - [Datasets](NLP/Datasets.md)
 - [Text Segmentation](NLP/Text%20Segmentation/README.md)
   - [Tokenization](NLP/Text%20Segmentation/Tokenization.md)
