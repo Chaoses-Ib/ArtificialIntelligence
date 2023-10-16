@@ -1,6 +1,19 @@
 # Unicode
 [Wikipedia](https://en.wikipedia.org/wiki/Unicode)
 
+[The Absolute Minimum Every Software Developer Must Know About Unicode in 2023 (Still No Excuses!) @ tonsky.me](https://tonsky.me/blog/unicode/) ([r/webdev](https://www.reddit.com/r/webdev/comments/178d3co/the_absolute_minimum_every_software_developer/)):
+> - Unicode has won.
+> - UTF-8 is the most popular encoding for data in transfer and at rest.
+> - UTF-16 is still sometimes used as an in-memory representation.
+> - The two most important views for strings are bytes (allocate memory/copy/encode/decode) and extended grapheme clusters (all semantic operations).
+> - Using code points for iterating over a string is wrong. They are not the basic unit of writing. One grapheme could consist of multiple code points.
+> - To detect grapheme boundaries, you need Unicode tables.
+> - Use a Unicode library for everything Unicode, even boring stuff like `strlen`, `indexOf` and `substring`.
+> - Unicode updates every year, and rules sometimes change.
+> - Unicode strings need to be normalized before they can be compared.
+> - Unicode depends on locale for some operations and for rendering.
+> - All this is important even for pure English text.
+
 ## Characters
 [Wikipedia](https://en.wikipedia.org/wiki/Universal_Character_Set_characters)
 - Noncharacters
