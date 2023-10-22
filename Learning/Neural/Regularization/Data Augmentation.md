@@ -22,7 +22,7 @@ When comparing machine learning benchmark results, taking the effect of dataset 
   
   尽管不同模型的本质就是不同的 prior knowledge，但在同一任务上的模型演进牺牲的是人们不太关心的问题，换句话说演进的模型编码的 prior knowledge 只是与任务本身的 prior knowledge 更接近了。但数据增强是一种强得多的 prior knowledge，在评估模型性能时必须要考虑模型使用的数据增强是否是对于该种任务的通用 prior knowledge。
 
-## [→Text data augmentation](../../../NLP/Regularization/Data%20Augmentation.md)
+## [→Text data augmentation](../../../Language/Regularization/Data%20Augmentation.md)
 
 ## [→Image data augmentation](https://github.com/Chaoses-Ib/VisualComputing/blob/main/Image%20Processing/Data%20Augmentation/README.md)
 

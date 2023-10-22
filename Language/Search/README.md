@@ -14,7 +14,7 @@ Question answering 也可看作是文本搜索的智能形态。
   - 编辑距离
 
 ## 词义搜索
-- [Word Embedding](Distributional%20Semantics/Word%20Embedding/README.md)
+- [Word Embedding](../Semantics/Embedding/README.md)
 
 ## 语义搜索
 [Semantic Text Search | Yext](https://www.yext.com/platform/features/semantic-text-search)
