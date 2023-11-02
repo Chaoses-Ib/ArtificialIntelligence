@@ -5,6 +5,12 @@
 ## [Machine Learning](Learning/README.md)
 - [→Statistics](https://github.com/Chaoses-Ib/Statistics)
 
+### [Meta Learning](Learning/Meta/README.md)
+- [Representation Learning](Learning/Meta/Representation/README.md)
+  - [Contrastive Learning](Learning/Meta/Representation/Contrastive/README.md)
+- [Transfer Learning](Learning/Meta/Transfer/README.md)
+- [Multitask Learning](Learning/Meta/Multitask/README.md)
+
 ### [Artificial Neural Networks](Learning/Neural/README.md)
 - [Activation Functions](Learning/Neural/Activation%20Functions.md) ([Python](Learning/Neural/Activation%20Functions.ipynb))
 - [Feed-forward Neural Networks](Learning/Neural/Feed-forward.md) ([Python](Learning/Neural/Feed-forward.ipynb))
@@ -26,7 +32,6 @@
   - [Noise Injection](Learning/Neural/Regularization/Noise%20Injection.md)
   - [Semi-supervised Learning](Learning/Neural/Regularization/Semi-supervised%20Learning.md)
   - [Parameter Norm Penalties](Learning/Neural/Regularization/Parameter%20Norm%20Penalties.md)
-  - [Multitask Learning](Learning/Neural/Regularization/Multitask%20Learning.md)
   - [Dropout](Learning/Neural/Regularization/Dropout.md)
   - [Bootstrap Aggregating](Learning/Neural/Regularization/Bootstrap%20Aggregating.md)
   - [Early Stopping](Learning/Neural/Regularization/Early%20Stopping.md)

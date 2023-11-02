@@ -27,7 +27,7 @@ In summary, a feedforward network with a single layer is sufficient to represent
 
 Various families of functions can be approximated efficiently by an architecture with depth greater than some value $d$, but they require a much larger model if depth is restricted to be less than or equal to $d$. In many cases, the number of hidden units required by the shallow model is exponential in $n$.
 
-We may also want to choose a deep model for statistical reasons. Any time we choose a specific machine learning algorithm, we are implicitly stating some set of prior beliefs we have about what kind of function the algorithm should learn. Choosing a deep model encodes a very general belief that the function we want to learn should involve composition of several simpler functions. This can be interpreted from a representation learning point of view as saying that we believe the learning problem consists of discovering a set of underlying factors of variation that can in turn be described in terms of other, simpler underlying factors of variation. Alternately, we can interpret the use of a deep architecture as expressing a belief that the function we want to learn is a computer program consisting of multiple steps, where each step makes use of the previous step’s output. These intermediate outputs are not necessarily factors of variation but can instead be analogous to counters or pointers that the network uses to organize its internal processing. Empirically, greater depth does seem to result in better generalization for a wide variety of tasks.[^deeplearning]
+We may also want to choose a deep model for statistical reasons. Any time we choose a specific machine learning algorithm, we are implicitly stating some set of prior beliefs we have about what kind of function the algorithm should learn. Choosing a deep model encodes a very general belief that the function we want to learn should involve composition of several simpler functions. This can be interpreted from a *representation learning* point of view as saying that we believe the learning problem consists of discovering a set of underlying factors of variation that can in turn be described in terms of other, simpler underlying factors of variation. Alternately, we can interpret the use of a deep architecture as expressing a belief that the function we want to learn is a computer program consisting of multiple steps, where each step makes use of the previous step’s output. These intermediate outputs are not necessarily factors of variation but can instead be analogous to counters or pointers that the network uses to organize its internal processing. Empirically, greater depth does seem to result in better generalization for a wide variety of tasks.[^deeplearning]
 
 Universal approximation theorem 已经表明，简单的 FNN 就可以近似足够复杂的函数，那么 ANN 还要研究什么呢？尽管简单的 FNN 可以近似足够复杂的函数，但这所需要的计算量常常是非常巨大的，ANN 的研究内容实际上不是提高 ANN 的近似能力，而是提高 ANN 的计算性能。从这里开始，ANN 就从理论学科变成了实践学科。
 
@@ -76,6 +76,11 @@ Books:
 - [神经网络与深度学习](https://nndl.github.io/) ([GitHub](https://github.com/nndl/nndl.github.io))
 
   烂书。
+
+Reddit:
+- [r/MachineLearning](https://www.reddit.com/r/MachineLearning/)
+- [r/LearnMachineLearning](https://www.reddit.com/r/learnmachinelearning)
+- [r/DeepLearning](https://www.reddit.com/r/deeplearning/hot/)
 
 
 [^deeplearning]: Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. _Deep Learning_. MIT Press, 2016.
