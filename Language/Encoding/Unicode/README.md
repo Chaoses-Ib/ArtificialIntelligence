@@ -14,6 +14,9 @@
 > - Unicode depends on locale for some operations and for rendering.
 > - All this is important even for pure English text.
 
+## Encodings
+[UTF-Random](https://www.reddit.com/r/ProgrammerHumor/comments/17ie2sm/whatatimetobealive/)
+
 ## Characters
 [Wikipedia](https://en.wikipedia.org/wiki/Universal_Character_Set_characters)
 - Noncharacters
@@ -35,6 +38,9 @@ Case:
   - std
   - [focaccia: 🍞 no_std Unicode case folding comparisons](https://github.com/artichoke/focaccia)
   - [unicase: Unicode Case-folding for Rust](https://github.com/seanmonstar/unicase)
+  - [rust-caseless: Unicode caseless matching](https://github.com/unicode-rs/rust-caseless) (discontinued)
+  - [str Utils: This crate provides some traits to extend types which implement `AsRef<[u8]>` or `AsRef<str>`.](https://github.com/magiclen/str-utils)
+    - [Documentation about Unicode normalization - Issue #2 - magiclen/str-utils](https://github.com/magiclen/str-utils/issues/2)
 
 General category:
 - Rust
@@ -49,6 +55,22 @@ General category:
 Implementations:
 - Rust
   - [unicode-normalization: Unicode Normalization forms according to UAX#15 rules](https://github.com/unicode-rs/unicode-normalization)
+
+Applications:
+- File systems
+  - Normalization: macOS
+  - No normalization: ext4, Windows (NTFS)
+  - Configurable: ZFS
+
+  [A story about Unix, Unicode, Java, filesystems, internationalization and normalization -- Webtide](https://webtide.com/a-story-about-unix-unicode-java-filesystems-internationalization-and-normalization/)
+
+  [APFS does not normalize Unicode filenames | Hacker News](https://news.ycombinator.com/item?id=13953800)
+
+- Web browsers
+  - Searching text on the page
+    - Normalization: Chromium
+
+[Unicode Normalization in Windows - Stack Overflow](https://stackoverflow.com/questions/7041013/unicode-normalization-in-windows)
 
 ## Libraries
 - [International Components for Unicode](https://icu.unicode.org/) ([Wikipedia](https://en.wikipedia.org/wiki/International_Components_for_Unicode), [GitHub](https://github.com/unicode-org/icu))
