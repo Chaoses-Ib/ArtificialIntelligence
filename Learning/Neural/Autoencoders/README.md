@@ -1,5 +1,5 @@
 # Autoencoders
-[Wikipedia](https://en.wikipedia.org/wiki/Autoencoder.)
+[Wikipedia](https://en.wikipedia.org/wiki/Autoencoder)
 
 An **autoencoder** is a neural network that is trained to attempt to copy its input to its output. An autoencoder may be viewed as consisting of two parts:
 - An encoder function $h=f(x)$
@@ -54,6 +54,15 @@ $$\Omega(h,x)=\lambda\sum_i{||\nabla_xh_i||^2}$$
 This forces the model to learn a function that does not change much when $x$ changes slightly.
 
 This approach has theoretical connections to denoising autoencoders, manifold learning, and probabilistic modeling.[^deeplearning]
+
+## Variational autoencoders
+[Wikipedia](https://en.wikipedia.org/wiki/Variational_autoencoder)
+
+**Variational autoencoders (VAEs)** belong to the families of variational Bayesian methods. Despite the architectural similarities with basic autoencoders, VAEs are architecture with different goals and with a completely different mathematical formulation. The latent space is in this case composed by a mixture of distributions instead of a fixed vector.
+
+[AutoencoderKL](https://huggingface.co/docs/diffusers/api/models/autoencoderkl)
+
+[Stable diffusion using Hugging Face | by Aayush Agrawal | Towards Data Science](https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8)
 
 
 [^wiki]: [Autoencoder - Wikipedia](https://en.wikipedia.org/wiki/Autoencoder)
