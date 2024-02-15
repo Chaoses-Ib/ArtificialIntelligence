@@ -1,4 +1,6 @@
 # [Artificial Intelligence](Artificial%20Intelligence.md)
+- [Agents](Agents.md)
+
 ## [Evolutionary Computation](Evolutionary/README.md)
 - [Genetic Algorithms](Evolutionary/Genetic/README.md)
 
