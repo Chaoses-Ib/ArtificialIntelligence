@@ -8,4 +8,7 @@
 - [awesome-chinese-nlp](https://github.com/crownpku/Awesome-Chinese-NLP)
 - [didi/ChineseNLP: Datasets, SOTA results of every fields of Chinese NLP](https://chinesenlp.xyz/#/zh/)
 
+Reddit:
+- [r/LanguageTechnology](https://www.reddit.com/r/LanguageTechnology/top/?t=week)
+
 [^wiki]: [Natural language processing - Wikipedia](https://en.wikipedia.org/wiki/Natural_language_processing)

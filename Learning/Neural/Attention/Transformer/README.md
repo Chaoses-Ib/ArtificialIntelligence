@@ -9,6 +9,8 @@
 
 [Transformers from Scratch](https://e2eml.school/transformers.html)
 
+[What Algorithms can Transformers Learn? A Study in Length Generalization](https://arxiv.org/abs/2310.16028) ([r/MachineLearning](https://www.reddit.com/r/MachineLearning/comments/17h43e9/r_what_algorithms_can_transformers_learn_a_study/))
+
 ## Tokens
 2022-10-17 [Token Merging: Your ViT but Faster](https://github.com/facebookresearch/ToMe)
 - 2023-03-30 [Token Merging for Fast Stable Diffusion](https://github.com/dbolya/tomesd)

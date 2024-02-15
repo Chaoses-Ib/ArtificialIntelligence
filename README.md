@@ -55,7 +55,11 @@
 - [Topic Modeling](Language/Topic/README.md)
   - [Latent Dirichlet Allocation](Language/Topic/LDA.md)
   - [基于潜在狄利克雷分配模型的语义搜索方法](Language/Topic/基于潜在狄利克雷分配模型的语义搜索方法/Paper.pdf) ([Slide](Language/Topic/基于潜在狄利克雷分配模型的语义搜索方法/Slide.pdf))
+- [Language Models](Language/Models/README.md)
+  - [Services](Language/Models/Services.md)
 - [Search](Language/Search/README.md)
+- [Translation](Language/Translation/README.md)
+  - [Evaluation](Language/Translation/Evaluation.md)
 - [Chatbots](Language/Chatbots.md)
 - Regularization
   - [Data Augmentation](Language/Regularization/Data%20Augmentation.md)
