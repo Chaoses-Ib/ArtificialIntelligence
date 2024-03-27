@@ -56,6 +56,20 @@
 
 - 2023-05 [Augmenting Large Language Model Translators via Translation Memories](https://arxiv.org/abs/2305.17367)
 
+- 2023-12 [An In-depth Look at Gemini's Language Abilities](https://arxiv.org/abs/2312.11444v2)
+
+  ![](https://arxiv.org/html/2312.11444v2/extracted/5315019/figures/mt_bubble_final_sb.png)
+
+  ![](https://arxiv.org/html/2312.11444v2/extracted/5315019/figures/mt_bubble_final_zero_sb.png)
+
+  Chinese is not tested.
+
+- 2024-03 [Translation is one of the most underrated of Gemini Advanced's capabilities : r/Bard](https://www.reddit.com/r/Bard/comments/1b8svx4/translation_is_one_of_the_most_underrated_of/)
+
+  Chinese:
+
+  ![](https://preview.redd.it/translation-is-one-of-the-most-underrated-of-gemini-v0-3np0qo9kpwmc1.jpeg?width=1984&format=pjpg&auto=webp&s=3538d34288ae249db5af827eca99d4178233e8a7)
+
 LLM 的翻译效果可能与具体领域有不小关联。
 
 [\[Discussion\] Translation of Japanese to English using GPT. These are my discoveries after ~100 hours of extensive experimentation and ways I think it can be improved. : MachineLearning](https://www.reddit.com/r/MachineLearning/comments/12pqqg6/discussion_translation_of_japanese_to_english/)

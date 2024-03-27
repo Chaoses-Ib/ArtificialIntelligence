@@ -71,6 +71,7 @@
 - [→Computer Vision](https://github.com/Chaoses-Ib/VisualComputing#computer-vision)
 - [→Image Processing](https://github.com/Chaoses-Ib/VisualComputing#image-processing)
 - [→Video Processing](https://github.com/Chaoses-Ib/VisualComputing#video-processing)
-- [→Natural Language Processing](https://github.com/Chaoses-Ib/VisualComputing#natural-language-processing)
+- [→Vision-Language](https://github.com/Chaoses-Ib/VisualComputing#vision-language)
+- [→Modeling](https://github.com/Chaoses-Ib/VisualComputing#modeling)
 
-## [→Sound Computing](https://github.com/Chaoses-Ib/SoundComputing)
+## [→Auditory Computing](https://github.com/Chaoses-Ib/AuditoryComputing)
