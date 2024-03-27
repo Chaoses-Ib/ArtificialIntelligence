@@ -60,6 +60,8 @@
 - [Language Models](Language/Models/README.md)
   - [Services](Language/Models/Services.md)
 - [Search](Language/Search/README.md)
+  - [Document Retrieval](Language/Search/Document/README.md)
+    - [Reciprocal Rank Fusion](Language/Search/Document/Reciprocal.md)
 - [Translation](Language/Translation/README.md)
   - [Evaluation](Language/Translation/Evaluation.md)
 - [Chatbots](Language/Chatbots.md)
