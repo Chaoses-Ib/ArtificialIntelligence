@@ -1,5 +1,21 @@
 # Tokenization
+[Tokenization and Word Segmentation - IBM Documentation](https://www.ibm.com/docs/en/watson-libraries?topic=tasks-tokenization-word-segmentation)
+
+## Stemming
+[Wikipedia](https://en.wikipedia.org/wiki/Stemming)
+
+Stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form - generally a written word form.
+
+## Lemmatization
+[Wikipedia](https://en.wikipedia.org/wiki/Lemmatization)
+
+Lemmatization is the process of grouping together the inflected forms of a word so they can be analysed as a single item, identified by the word's lemma, or dictionary form.
+
 ## Chinese
+[中文分词详解：从词典匹配到深度学习方法 | Erwin Feng Blog](https://allenwind.github.io/blog/8269/)
+
+[关于中文分词的一元分词讨论（优缺点） - 小周博客](https://www.css3er.com/p/167.html)
+
 ### Libraries
 Python:
 - [jieba](https://github.com/fxsjy/jieba)
