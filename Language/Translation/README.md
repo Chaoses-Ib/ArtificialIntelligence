@@ -4,8 +4,19 @@
 [Meta AI Research Topic - No Language Left Behind](https://ai.meta.com/research/no-language-left-behind/)
 
 ## LLM
+- [Content length](../Models/README.md#context-length)
+  - chat 比较适合用于长文档，特别是因为 context 中断而导致翻译或格式错乱的。但 chat 的隐含 prompt 也可能会导致别的问题，比如自动添加 <code>```html</code>。
+
+- LLM 的翻译效果可能与具体领域有不小关联。
+
+- 对于模型不遵守 prompt 中给定的 terminology 翻译的情况，可以使用文本替换来间接解决，或者根据具体输入来自动调整 prompt。
+  - 全半角混淆问题
+
+- 由于每次的翻译结果都可能不同，使用 Git 类的工具来追踪和筛选翻译的变化能够提高总体质量。
+
 [Machine Translation with LLMs Reading List](https://github.com/hsing-wang/Awesome-LLM-MT)
 
+History:
 - 2023-01 [Prompting Large Language Model for Machine Translation: A Case Study](https://arxiv.org/abs/2301.07069)
 
 - 2023-01 [Is ChatGPT A Good Translator? Yes With GPT-4 As The Engine](https://arxiv.org/abs/2301.08745)
@@ -69,8 +80,6 @@
   Chinese:
 
   ![](https://preview.redd.it/translation-is-one-of-the-most-underrated-of-gemini-v0-3np0qo9kpwmc1.jpeg?width=1984&format=pjpg&auto=webp&s=3538d34288ae249db5af827eca99d4178233e8a7)
-
-LLM 的翻译效果可能与具体领域有不小关联。
 
 [\[Discussion\] Translation of Japanese to English using GPT. These are my discoveries after ~100 hours of extensive experimentation and ways I think it can be improved. : MachineLearning](https://www.reddit.com/r/MachineLearning/comments/12pqqg6/discussion_translation_of_japanese_to_english/)
 

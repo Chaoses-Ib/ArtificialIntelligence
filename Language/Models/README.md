@@ -31,3 +31,27 @@ Function vectors:
 [Prompt Engineering | Lil'Log](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
 
 [面向开发者的 LLM 入门教程，吴恩达大模型系列课程中文版](https://github.com/datawhalechina/prompt-engineering-for-developers)
+
+## Context length
+```python
+async def split_by_max_tokens(s: str, max_token_k = 3.5) -> list[str]:
+    slices = []
+    async def append_slice(slice: str):
+        tokens = (await model.count_tokens_async(buf)).total_tokens
+        print(tokens, len(buf))
+        assert tokens < MAX_TOKEN
+
+        slices.append(slice)
+    
+    buf = ''
+    for line in s.splitlines(keepends=True):
+        if len(buf) < MAX_TOKEN * max_token_k:
+            buf += line
+        else:
+            await append_slice(buf)
+            buf = line
+    await append_slice(buf)
+    
+    return slices
+```
+英译中时，token 大部分情况下都是减少的。

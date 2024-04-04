@@ -47,6 +47,7 @@
 - [Knowledge-based Agents](Symbolic/Knowledge-based%20Agents.md)
 
 ## [Natural Language Processing](Language/README.md)
+- [Languages](Language/Languages/README.md)
 - [Encoding](Language/Encoding/README.md)
   - [Unicode](Language/Encoding/Unicode/README.md)
 - [Segmentation](Language/Segmentation/README.md)

@@ -50,11 +50,18 @@
 
 [Gemini API Pricing](https://ai.google.dev/pricing)
 - Free: 60 RPM
+- OSINT: `genai.configure(api_key=`
+
+[Gemini REST API Reference](https://docs.gemini.com/rest-api/)
 
 Libraries:
 - [Google Python SDK for the Gemini API](https://github.com/google/generative-ai-python)
   
   [Gemini API: Quickstart with Python](https://ai.google.dev/tutorials/python_quickstart)
+
+  If the rate limit is exceeded, the API will return `RATE_LIMIT_EXCEEDED` error and ban the client for a "short period" of time.
+
+  `count_tokens()` also counts as a request.
 
 - [HanaokaYuzu/Gemini-API: ✨ An elegant async Python wrapper for Google Gemini web app](https://github.com/HanaokaYuzu/Gemini-API)
 
@@ -63,6 +70,8 @@ Libraries:
 ### Gemini Pro
 - Input: 30720 tokens
 - Output: 2048 tokens
+
+  Very limiting for translation tasks.
 
 [An In-depth Look at Gemini's Language Abilities](https://arxiv.org/abs/2312.11444v2) ([中文](https://baoyu.io/translations/ai-paper/2312.11444-an-in-depth-look-at-geminis-language-abilities))
 - [Machine translation](../Translation/README.md#llm)
