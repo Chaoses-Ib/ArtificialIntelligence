@@ -18,5 +18,10 @@
 
     在图像尺寸较小时会导致性能降低。
 
+## Libraries
+- [🤗 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX.](https://github.com/huggingface/transformers)
+
+  [How to make transformers examples use GPU? - Issue #2704](https://github.com/huggingface/transformers/issues/2704)
+
 
 [^allyouneed]: Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. “Attention Is All You Need.” arXiv, December 5, 2017. [https://doi.org/10.48550/arXiv.1706.03762](https://doi.org/10.48550/arXiv.1706.03762).
