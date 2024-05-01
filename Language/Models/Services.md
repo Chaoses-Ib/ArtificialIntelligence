@@ -2,16 +2,21 @@
 - [gpt4free: The official gpt4free repository | various collection of powerful language models](https://github.com/xtekky/gpt4free)
   - [gpt4free-ts: GPT4Free TypeScript Version](https://github.com/xiangsx/gpt4free-ts)
 
+History:
+- 2024-04 [现在个人用户订阅大语言模型的最划算的方法是什么？ - V2EX](https://www.v2ex.com/t/1036778)
+
 ## OpenAI
 [What is the difference between the GPT-4 models? | OpenAI Help Center](https://help.openai.com/en/articles/7127966-what-is-the-difference-between-the-gpt-4-models)
 
 ### Azure
 [Comparing Performance of OpenAI GPT-4 and Microsoft Azure GPT-4](https://www.mcplusa.com/comparing-performance-of-openai-gpt-4-and-microsoft-azure-gpt-4/)
 
-- Bing Chat
+- Microsoft Copilot (Bing Chat, [Wikipedia](https://en.wikipedia.org/wiki/Microsoft_Copilot))
   - Context length: 2K
 
     [How to Set the Text Limit on Bing Chat to 25000 (max it can handle) : bing](https://www.reddit.com/r/bing/comments/12ph7le/how_to_set_the_text_limit_on_bing_chat_to_25000/)
+  
+  [New-Bing-Anywhere: 💬 New-Bing-Anywhere extension's source Always use Bing GPT-4](https://github.com/ha0z1/New-Bing-Anywhere)
 
 ### China
 - [GPTAPI.US](https://www.gptapi.us/register?aff=FntG)
@@ -20,11 +25,13 @@
 
   [最低价的 GPT-4-32k API，价格低于官网 44 倍 - V2EX](https://www.v2ex.com/t/995825)
 
+  [gptapi.us 中转站避雷提醒 - V2EX](https://www.v2ex.com/t/1027837)
+
 - [xeduapi.com](https://xeduapi.com/register?aff=muPd)
 
-  > 直连gpt-4价格为官方的2分之一(gpt-4默认修正倍数15x24(充值折扣)/2=180倍率)
+  > gpt4全系价格为官方的2.7折,官方的3.6分之一,实际2元人民币兑换1美金---gpt4默认倍率x24(充值折扣)x0.27
   > 
-  > gpt3.5价格为官方的24分之一,0.3元兑换1美金,倍率0.75
+  > gpt3.5只有openai官网逆向模型gpt-3.5-turbo-web 全系价格为官方的0.416折,官方的24分之一,0.3元人民币兑换1美金
 
   > 中转站gpt3.5是openai提供,gpt-4是微软,审核力度不同
 
@@ -44,6 +51,8 @@
 - [evanora.top](https://oneai.evanora.top/)
 
 [为什么 chatgpt 的 api key 价格可以被拉的特别低？ - V2EX](https://www.v2ex.com/t/995306#reply4)
+
+[API 中转站 OpenKey 突然修改存量用户余额有效期 - V2EX](https://global.v2ex.com/t/1032122)
 
 ## Gemini
 [Gemini models](https://ai.google.dev/models/gemini)
