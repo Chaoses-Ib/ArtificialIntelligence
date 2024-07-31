@@ -81,6 +81,10 @@ History:
 
   ![](https://preview.redd.it/translation-is-one-of-the-most-underrated-of-gemini-v0-3np0qo9kpwmc1.jpeg?width=1984&format=pjpg&auto=webp&s=3538d34288ae249db5af827eca99d4178233e8a7)
 
+- 2024-12 Gemini Team, Petko Georgiev, Ving Ian Lei, Ryan Burnell, Libin Bai, Anmol Gulati, Garrett Tanzer, et al. “Gemini 1.5: Unlocking Multimodal Understanding across Millions of Tokens of Context.” arXiv, June 14, 2024. https://doi.org/10.48550/arXiv.2403.05530.
+
+  ![](images/README/Gemini1.5.png)
+
 [\[Discussion\] Translation of Japanese to English using GPT. These are my discoveries after ~100 hours of extensive experimentation and ways I think it can be improved. : MachineLearning](https://www.reddit.com/r/MachineLearning/comments/12pqqg6/discussion_translation_of_japanese_to_english/)
 
 [Best local LLM for translating text? : LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/12o25ca/best_local_llm_for_translating_text/)

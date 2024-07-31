@@ -58,8 +58,13 @@ History:
 [Gemini models](https://ai.google.dev/models/gemini)
 
 [Gemini API Pricing](https://ai.google.dev/pricing)
-- Free: 60 RPM
 - OSINT: `genai.configure(api_key=`
+
+Model | Token limits | Rate limits
+--- | --- | ---
+Gemini 1.0 Pro | 30,720 & 2,048 | 15 RPM, 32K TPM, 1500 RPD
+Gemini 1.5 Pro | 2,097,152 & 8,192 | 2 RPM, 32K TPM, 50 RPD
+Gemini 1.5 Flash | 1,048,576 & 8,192 | 15 RPM, 1M TPM, 1500 RPD
 
 [Gemini REST API Reference](https://docs.gemini.com/rest-api/)
 
@@ -72,11 +77,15 @@ Libraries:
 
   `count_tokens()` also counts as a request.
 
+  `FailedPrecondition: 400 User location is not supported for the API use.`
+  - Hong Kong
+  - [User location is not supported for the API use. - Issue #159 - google-gemini/generative-ai-python](https://github.com/google-gemini/generative-ai-python/issues/159)
+
 - [HanaokaYuzu/Gemini-API: ✨ An elegant async Python wrapper for Google Gemini web app](https://github.com/HanaokaYuzu/Gemini-API)
 
 - [dsdanielpark/Gemini-API: The unofficial python package that returns response of Google Gemini through cookie values.](https://github.com/dsdanielpark/Gemini-API)
 
-### Gemini Pro
+### Gemini 1.0 Pro
 - Input: 30720 tokens
 - Output: 2048 tokens
 
@@ -84,3 +93,17 @@ Libraries:
 
 [An In-depth Look at Gemini's Language Abilities](https://arxiv.org/abs/2312.11444v2) ([中文](https://baoyu.io/translations/ai-paper/2312.11444-an-in-depth-look-at-geminis-language-abilities))
 - [Machine translation](../Translation/README.md#llm)
+
+### Gemini 1.5 Pro
+- Very slow, especially in chat mode. Don't use a small timeout, like google-generativeai used in old versions.
+
+  [google.generativeai.types.RequestOptions](https://github.com/google-gemini/generative-ai-python/blob/d0f3359a93a5192238bbf655ed57b6235913aef2/docs/api/google/generativeai/types/RequestOptions.md)
+
+  [google.api\_core.exceptions.DeadlineExceeded: 504 Deadline Exceeded - Issue #294 - google-gemini/generative-ai-python](https://github.com/google-gemini/generative-ai-python/issues/294)
+
+### Gemini 1.5 Flash
+[Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context](https://arxiv.org/abs/2403.05530)
+
+[Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra](https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/?utm_source=gdm&utm_medium=referral&utm_campaign=io24)
+
+[Gemini gets 1.5 Flash, a new related content feature and more](https://blog.google/products/gemini/google-gemini-new-features-july-2024/)
