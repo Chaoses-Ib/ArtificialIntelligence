@@ -1,4 +1,4 @@
-# Tokenization
+# Word Segmentation
 [Tokenization and Word Segmentation - IBM Documentation](https://www.ibm.com/docs/en/watson-libraries?topic=tasks-tokenization-word-segmentation)
 
 ## Stemming

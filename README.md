@@ -51,7 +51,8 @@
 - [Encoding](Language/Encoding/README.md)
   - [Unicode](Language/Encoding/Unicode/README.md)
 - [Segmentation](Language/Segmentation/README.md)
-  - [Tokenization](Language/Segmentation/Tokenization.md)
+  - [Chunking](Language/Segmentation/Chunking.md)
+  - [Word Segmentation](Language/Segmentation/Word.md)
   - [Stop Words](Language/Segmentation/Stop%20Words.md)
 - Distributional Semantics
   - [Word Embedding](Language/Semantics/Embedding/README.md)
