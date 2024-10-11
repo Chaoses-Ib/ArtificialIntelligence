@@ -68,6 +68,11 @@ Challenges motivating deep learning:
 
 [How 🤗 Accelerate runs very large models thanks to PyTorch](https://huggingface.co/blog/accelerate-large-models)
 
+## Visualization
+- [A Neural Network Playground](https://playground.tensorflow.org/)
+
+[Tools to Design or Visualize Architecture of Neural Network](https://github.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network)
+
 ## Information sources
 Books:
 - [Deep Learning](https://www.deeplearningbook.org/)
