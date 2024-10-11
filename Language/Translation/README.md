@@ -5,7 +5,7 @@
 
 ## LLM
 - [Content length](../Models/README.md#context-length)
-  - chat 比较适合用于长文档，特别是因为 context 中断而导致翻译或格式错乱的。但 chat 的隐含 prompt 也可能会导致别的问题，比如自动添加 <code>```html</code>。
+  - chat 比较适合用于长文档，特别是因为 context 中断而导致翻译或格式错乱的。但 chat 的隐含 prompt 也可能会导致别的问题，比如自动添加 <code>```html</code>，或者是重复包含之前的翻译结果。
 
 - LLM 的翻译效果可能与具体领域有不小关联。
 
@@ -81,7 +81,7 @@ History:
 
   ![](https://preview.redd.it/translation-is-one-of-the-most-underrated-of-gemini-v0-3np0qo9kpwmc1.jpeg?width=1984&format=pjpg&auto=webp&s=3538d34288ae249db5af827eca99d4178233e8a7)
 
-- 2024-12 Gemini Team, Petko Georgiev, Ving Ian Lei, Ryan Burnell, Libin Bai, Anmol Gulati, Garrett Tanzer, et al. “Gemini 1.5: Unlocking Multimodal Understanding across Millions of Tokens of Context.” arXiv, June 14, 2024. https://doi.org/10.48550/arXiv.2403.05530.
+- 2024-03~06 Gemini Team, Petko Georgiev, Ving Ian Lei, Ryan Burnell, Libin Bai, Anmol Gulati, Garrett Tanzer, et al. “Gemini 1.5: Unlocking Multimodal Understanding across Millions of Tokens of Context.” arXiv, June 14, 2024. https://doi.org/10.48550/arXiv.2403.05530.
 
   ![](images/README/Gemini1.5.png)
 

@@ -98,6 +98,12 @@ Libraries:
 - Very slow, especially in chat mode. Don't use a small timeout, like google-generativeai used in old versions.
 
   [google.generativeai.types.RequestOptions](https://github.com/google-gemini/generative-ai-python/blob/d0f3359a93a5192238bbf655ed57b6235913aef2/docs/api/google/generativeai/types/RequestOptions.md)
+  ```python
+  # import google.api_core.retry
+  import google.api_core.retry_async
+
+  request_options = genai.types.RequestOptions(retry=google.api_core.retry_async.AsyncRetry(timeout=3600), timeout=3600)
+  ```
 
   [google.api\_core.exceptions.DeadlineExceeded: 504 Deadline Exceeded - Issue #294 - google-gemini/generative-ai-python](https://github.com/google-gemini/generative-ai-python/issues/294)
 
