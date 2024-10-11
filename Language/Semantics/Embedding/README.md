@@ -12,5 +12,12 @@ In natural language processing, **word embedding** is a term used for the repres
 [^wiki]: [Word embedding - Wikipedia](https://en.wikipedia.org/wiki/Word_embedding)
 [^zhihu]: [什么是 word embedding? - 知乎](https://www.zhihu.com/question/32275069)
 
+## Models
+- [jinaai/jina-embeddings-v2-base-zh - Hugging Face](https://huggingface.co/jinaai/jina-embeddings-v2-base-zh) ([Jupyter Notebook](jina.ipynb))
+  - Byte-level BPE (`RobertaTokenizer`), vocab size 61056
+    - `model_max_length` is 512?
+  - Sequence length: 8192
+  - Dimension: 768
+
 ## Tools
 - [WantWords 反向词典](https://wantwords.net/)

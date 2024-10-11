@@ -9,6 +9,8 @@
 
 [Transformers from Scratch](https://e2eml.school/transformers.html)
 
+[What is the positional encoding in the transformer model? - Data Science Stack Exchange](https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model)
+
 [What Algorithms can Transformers Learn? A Study in Length Generalization](https://arxiv.org/abs/2310.16028) ([r/MachineLearning](https://www.reddit.com/r/MachineLearning/comments/17h43e9/r_what_algorithms_can_transformers_learn_a_study/))
 
 ## Tokens
@@ -22,6 +24,11 @@
 - [🤗 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX.](https://github.com/huggingface/transformers)
 
   [How to make transformers examples use GPU? - Issue #2704](https://github.com/huggingface/transformers/issues/2704)
+
+  [Downloading a model from the hub without loading it - 🤗Transformers - Hugging Face Forums](https://discuss.huggingface.co/t/downloading-a-model-from-the-hub-without-loading-it/48377)
+  - There is no easy way to only download a model but not load it.
+
+- [Curated Transformers: 🤖 A PyTorch library of curated Transformer models and their composable components](https://github.com/explosion/curated-transformers)
 
 
 [^allyouneed]: Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. “Attention Is All You Need.” arXiv, December 5, 2017. [https://doi.org/10.48550/arXiv.1706.03762](https://doi.org/10.48550/arXiv.1706.03762).

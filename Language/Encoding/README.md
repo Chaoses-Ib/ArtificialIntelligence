@@ -50,5 +50,17 @@ Libraries:
 - Transformers
 - [tiktoken: tiktoken is a fast BPE tokeniser for use with OpenAI's models.](https://github.com/openai/tiktoken)
 
+## Padding
+If a model can handle variable-length sequences, is padding still necessary?
+- [Do we need to use padding parameter for inferencing in Bert? - Stack Overflow](https://stackoverflow.com/questions/74726875/do-we-need-to-use-padding-parameter-for-inferencing-in-bert)
+
+  > You need padding when you have input sequences of various lengths in one batch. If you can afford running with batch size = 1 there is no need for padding.
+
+[Understanding masking & padding  |  TensorFlow Core](https://www.tensorflow.org/guide/keras/understanding_masking_and_padding)
+
+[Padding and truncation](https://huggingface.co/docs/transformers/en/pad_truncation)
+
+[Initial embeddings for unknown, padding? - Data Science Stack Exchange](https://datascience.stackexchange.com/questions/32345/initial-embeddings-for-unknown-padding)
+
 
 [^nlppytorch]: Natural Language Processing with PyTorch by Delip Rao and Brian McMahan (O’Reilly). Copyright 2019, Delip Rao and Brian McMahan, 978-1-491-97823-8.
