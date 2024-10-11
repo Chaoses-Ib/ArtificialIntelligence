@@ -28,7 +28,10 @@ pd.DataFrame([x.flatten() for x in x.numpy()])
 ```
 
 ## Dataset
+[Datasets & DataLoaders --- PyTorch Tutorials documentation](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html)
+
 [torch.utils.data — PyTorch documentation](https://pytorch.org/docs/stable/data.html)
+- `num_workers > 0` will break debugging.
 
 pandas.DataFrame → torch.Dataset:
 ```python
