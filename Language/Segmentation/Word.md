@@ -17,6 +17,10 @@ Lemmatization is the process of grouping together the inflected forms of a word 
 [关于中文分词的一元分词讨论（优缺点） - 小周博客](https://www.css3er.com/p/167.html)
 
 ### Libraries
+Rust:
+- [huggingface/tokenizers: 💥 Fast State-of-the-Art Tokenizers optimized for Research and Production](https://github.com/huggingface/tokenizers)
+- [rust-tokenizers: High-performance tokenizers for modern language models, including WordPiece, Byte-Pair Encoding (BPE) and Unigram (SentencePiece) models](https://github.com/guillaume-be/rust-tokenizers) (inactive)
+
 Python:
 - [jieba](https://github.com/fxsjy/jieba)
 

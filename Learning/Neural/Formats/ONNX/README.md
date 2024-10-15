@@ -5,6 +5,8 @@
 >
 > Each computation dataflow graph is a list of nodes that form an acyclic graph. Nodes have inputs and outputs. Each node is a call to an operator. Metadata documents the graph. Built-in operators are to be available on each ONNX-supporting framework.
 
+Is ONNX Turing complete?
+
 ## Backends
 [ONNX Backend Scoreboard](https://onnx.ai/backend-scoreboard/index_dev.html)
 
@@ -14,6 +16,8 @@ C++:
   Rust:
   - [onnxruntime-rs: Rust wrapper for Microsoft's ONNX Runtime (version 1.8)](https://github.com/nbigaouette/onnxruntime-rs) (discontinued)
     - [ort: Fast ML inference & training for Rust with ONNX Runtime](https://github.com/pykeio/ort)
+
+- [onnx2c: Open Neural Network Exchange to C compiler.](https://github.com/kraiskil/onnx2c)
 
 Rust:
 - [huggingface/candle: Minimalist ML framework for Rust](https://github.com/huggingface/candle)
@@ -30,9 +34,14 @@ Rust:
 
   > models can't run on the CPU, somewhat limited supports for operators
 
+- [rten: ONNX neural network inference engine](https://github.com/robertknight/rten)
+
 - [Kyanite: A neural network inference library, written in Rust.](https://github.com/KarelPeeters/Kyanite)
 
 Python:
 - [onnx-tensorflow: Tensorflow Backend for ONNX](https://github.com/onnx/onnx-tensorflow/) (discontinued)
 
 2023-11 [ONNX Libraries in Rust : r/rust](https://www.reddit.com/r/rust/comments/186plbx/onnx_libraries_in_rust/)
+
+## Convertions
+- [huggingface/optimum: 🚀 Accelerate training and inference of 🤗 Transformers and 🤗 Diffusers with easy to use hardware optimization tools](https://github.com/huggingface/optimum)

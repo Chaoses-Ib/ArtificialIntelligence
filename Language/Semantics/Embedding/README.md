@@ -12,12 +12,41 @@ In natural language processing, **word embedding** is a term used for the repres
 [^wiki]: [Word embedding - Wikipedia](https://en.wikipedia.org/wiki/Word_embedding)
 [^zhihu]: [什么是 word embedding? - 知乎](https://www.zhihu.com/question/32275069)
 
-## Models
-- [jinaai/jina-embeddings-v2-base-zh - Hugging Face](https://huggingface.co/jinaai/jina-embeddings-v2-base-zh) ([Jupyter Notebook](jina.ipynb))
-  - Byte-level BPE (`RobertaTokenizer`), vocab size 61056
-    - `model_max_length` is 512?
-  - Sequence length: 8192
-  - Dimension: 768
+## Libraries
+Python:
+- Transformers
+- [sentence-transformers: State-of-the-Art Text Embeddings](https://github.com/UKPLab/sentence-transformers)
+  - Backends: PyTorch, ONNX, OpenVINO
+  - [Speeding up Inference --- Sentence Transformers documentation](https://www.sbert.net/docs/sentence_transformer/usage/efficiency.html)
+
+    [Release v3.2.0 - ONNX and OpenVINO backends offering 2-3x speedup; Static Embeddings offering 50x-500x speedups at ~10-20% performance cost - UKPLab/sentence-transformers](https://github.com/UKPLab/sentence-transformers/releases/tag/v3.2.0)
+
+  - [SentenceTransformer API vs. Transformer API + pooling - Issue #405](https://github.com/UKPLab/sentence-transformers/issues/405)
+
+  [SentenceTransformers Documentation --- Sentence Transformers documentation](https://www.sbert.net/)
+
+  [Why do sentence transformers produce slightly different embeddings for the same text? - Stack Overflow](https://stackoverflow.com/questions/77353142/why-do-sentence-transformers-produce-slightly-different-embeddings-for-the-same)
+
+- [fast-sentence-transformers: Simply, faster, sentence-transformers](https://github.com/davidberenstein1957/fast-sentence-transformers)
+
+Rust:
+- [rust-bert: Rust native ready-to-use NLP pipelines and transformer-based models (BERT, DistilBERT, GPT2,...)](https://github.com/guillaume-be/rust-bert)
+  - tch/ort + rust-tokenizers
+  - [rust-sbert: Rust port of sentence-transformers](https://github.com/cpcdoy/rust-sbert)
+  - [rust-sentence-transformers: Rust port of https://github.com/UKPLab/sentence-transformers](https://github.com/mladvladimir/rust-sentence-transformers)
+
+- [fastembed-rs: Library for generating vector embeddings, reranking in Rust](https://github.com/Anush008/fastembed-rs)
+  - ort + tokenizers
+  - No built-in GPU support...
+
+  [FastEmbed-rs 🦀 - Rust library to generate sentence embeddings for your project. : r/rust](https://www.reddit.com/r/rust/comments/17dniwx/fastembedrs_rust_library_to_generate_sentence/)
+
+- Candle
+  - [huggingface/text-embeddings-inference: A blazing fast inference solution for text embeddings models](https://github.com/huggingface/text-embeddings-inference)
+  - [ShelbyJenkins/candle\_embed: A simple, CUDA or CPU powered, library for creating vector embeddings using Candle and models from Hugging Face](https://github.com/shelbyJenkins/candle_embed)
+
+[Hugging Face embedding models in Rust : r/rust](https://www.reddit.com/r/rust/comments/1eol2nd/hugging_face_embedding_models_in_rust/)
+> I’m the developer of ort, which would be perfect for this use case. Candle and burn are also excellent choices but unfortunately don’t quite match ort in performance or maturity yet.
 
 ## Tools
 - [WantWords 反向词典](https://wantwords.net/)

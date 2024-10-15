@@ -22,6 +22,7 @@
 
 ## Libraries
 - [🤗 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX.](https://github.com/huggingface/transformers)
+  - [Backends](https://huggingface.co/docs/transformers/en/index#supported-models-and-frameworks): PyTorch, TensorFlow, JAX
 
   [How to make transformers examples use GPU? - Issue #2704](https://github.com/huggingface/transformers/issues/2704)
 

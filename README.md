@@ -58,6 +58,8 @@
   - [Stop Words](Language/Segmentation/Stop%20Words.md)
 - Distributional Semantics
   - [Word Embedding](Language/Semantics/Embedding/README.md)
+    - [Sentence Embeddings](Language/Semantics/Embedding/Sentence.md)
+    - [Benchmarks](Language/Semantics/Embedding/benches/README.md)
 - [Topic Modeling](Language/Topic/README.md)
   - [Latent Dirichlet Allocation](Language/Topic/LDA.md)
   - [基于潜在狄利克雷分配模型的语义搜索方法](Language/Topic/基于潜在狄利克雷分配模型的语义搜索方法/Paper.pdf) ([Slide](Language/Topic/基于潜在狄利克雷分配模型的语义搜索方法/Slide.pdf))

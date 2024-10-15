@@ -66,6 +66,16 @@ Challenges motivating deep learning:
   [TensorFlow-DirectML AI Benchmark with Intel Integrated Graphics - SkatterBencher](https://skatterbencher.com/tensorflow-directml-ai-benchmark-with-intel-integrated-graphics/)
 - [xFormers: Hackable and optimized Transformers building blocks, supporting a composable construction.](https://github.com/facebookresearch/xformers)
 
+- [huggingface/optimum: 🚀 Accelerate training and inference of 🤗 Transformers and 🤗 Diffusers with easy to use hardware optimization tools](https://github.com/huggingface/optimum)
+  - Needed at runtime?
+
+    Probably not.
+
+    [Optimum Inference with ONNX Runtime](https://huggingface.co/docs/optimum/main/en/onnxruntime/usage_guides/models)
+
+    [Export a model to ONNX with optimum.exporters.onnx](https://huggingface.co/docs/optimum/en/exporters/onnx/usage_guides/export_a_model)
+    > Once exported, a model can be optimized for inference via techniques such as graph optimization and quantization. Check the `optimum.onnxruntime` subpackage to optimize and run ONNX models!
+
 [How 🤗 Accelerate runs very large models thanks to PyTorch](https://huggingface.co/blog/accelerate-large-models)
 
 ## Visualization

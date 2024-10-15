@@ -13,6 +13,10 @@ Tutorials:
   - [动手学深度学习](https://zh.d2l.ai/) ([GitHub](https://github.com/d2l-ai/d2l-zh))
 - [深度学习框架 PyTorch：入门与实践](https://github.com/chenyuntc/pytorch-book) (discontinued)
 
+## Bindings
+Rust:
+- [tch-rs: Rust bindings for the C++ api of PyTorch.](https://github.com/LaurentMazare/tch-rs)
+
 ## Tensor
 [torch.Tensor — PyTorch documentation](https://pytorch.org/docs/stable/tensors.html)
 
