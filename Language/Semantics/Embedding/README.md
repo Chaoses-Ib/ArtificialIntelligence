@@ -35,9 +35,13 @@ Rust:
   - [rust-sbert: Rust port of sentence-transformers](https://github.com/cpcdoy/rust-sbert)
   - [rust-sentence-transformers: Rust port of https://github.com/UKPLab/sentence-transformers](https://github.com/mladvladimir/rust-sentence-transformers)
 
-- [fastembed-rs: Library for generating vector embeddings, reranking in Rust](https://github.com/Anush008/fastembed-rs)
+- [FastEmbed-rs: Library for generating vector embeddings, reranking in Rust](https://github.com/Anush008/fastembed-rs)
   - ort + tokenizers
   - No built-in GPU support...
+  - 没有暴露 ort 的异步推理和终止推理的接口
+  - anyhow
+
+  [fastembed-bench](benches/fastembed-bench/src/main.rs)
 
   [FastEmbed-rs 🦀 - Rust library to generate sentence embeddings for your project. : r/rust](https://www.reddit.com/r/rust/comments/17dniwx/fastembedrs_rust_library_to_generate_sentence/)
 
