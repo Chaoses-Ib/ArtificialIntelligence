@@ -47,6 +47,71 @@ General category:
   - [YesSeri/diacritics](https://github.com/YesSeri/diacritics)
   - [Tashkil: A lightweight Rust library for removing Arabic diacritics](https://github.com/LGUG2Z/tashkil)
 
+## Newlines
+[Wikipedia](https://en.wikipedia.org/wiki/Newline)
+
+Programming languages:
+- `\n` with text/binary mode: C, C++, Perl, Haskell
+
+  > The C programming language provides the escape sequences `'\n'` (newline) and `'\r'` (carriage return). However, these are not required to be equivalent to the ASCII LF and CR control characters. The C standard only guarantees two things:
+  > 1. Each of these escape sequences maps to a unique implementation-defined number that can be stored in a single char value.
+  > 2. When writing to a file, device node, or socket/fifo in *text mode*, `'\n'` is transparently translated to the native newline sequence used by the system, which may be longer than one character. When reading in text mode, the native newline sequence is translated back to `'\n'`. In *binary mode*, no translation is performed, and the internal representation produced by `'\n'` is output directly.
+
+  > On Unix platforms, where C originated, the native newline sequence is ASCII LF (0x0A), so `'\n'` was simply defined to be that value. With the internal and external representation being identical, the translation performed in text mode is a no-op, and Unix has no notion of text mode or binary mode. This has caused many programmers who developed their software on Unix systems simply to ignore the distinction completely, resulting in code that is not portable to different platforms.
+
+- Auxiliary functions/constants: Python, Java, PHP
+
+  - Python
+
+    > Python permits "Universal Newline Support" when opening a file for reading, when importing modules, and when executing a file.
+
+  - Java
+
+    > The Java I/O libraries do not transparently translate these into platform-dependent newline sequences on input or output. Instead, they provide functions for writing a full line that automatically add the native newline sequence, and functions for reading lines that accept any of CR, LF, or CR+LF as a line terminator (see [BufferedReader.readLine()](http://download.oracle.com/javase/6/docs/api/java/io/BufferedReader.html#readLine%28%29)). The [System.lineSeparator()](http://docs.oracle.com/javase/8/docs/api/java/lang/System.html#lineSeparator--) method can be used to retrieve the underlying line separator.
+  
+  - PHP
+
+    > In PHP, to avoid portability problems, newline sequences should be issued using the `PHP_EOL` constant.
+
+- Just `\n` all the way: Rust
+
+  - Rust
+
+    没想到标准库一点支持都没有，第三方库也很少。
+
+    [Isn't crlf default on windows? - help - Mozilla](https://users.rust-lang.org/t/isnt-crlf-default-on-windows/10474)
+
+    [rust - Is there a way to force print!/println! to use a Windows new line (CR LF) - Stack Overflow](https://stackoverflow.com/questions/37558353/is-there-a-way-to-force-print-println-to-use-a-windows-new-line-cr-lf)
+    ```rust
+    println!("\r")
+    ```
+    ```rust
+    macro_rules! wprintln {
+        ($fmt:expr) => (print!(concat!($fmt, "\r\n")));
+        ($fmt:expr, $($arg:tt)*) => (print!(concat!($fmt, "\r\n"), $($arg)*));
+    }
+    ```
+
+    [Cargo and line endings on Windows - Editors and IDEs - Mozilla](https://users.rust-lang.org/t/cargo-and-line-endings-on-windows/94380)
+
+    [Forcing Rust to emit Windows-style newlines? : r/rust](https://www.reddit.com/r/rust/comments/9zugu1/forcing_rust_to_emit_windowsstyle_newlines/)
+
+    Libraries:
+    - [crlify: A `std::io::Write` wrapper that replaces with on Windows.](https://docs.rs/crlify/latest/crlify/)
+    - [loe: Very fast and yet another line ending (CRLF <-> LF) converter written in Rust.](https://github.com/pnevyk/loe)
+    - [force-crlf: Force a file to use CRLF line breaks.](https://github.com/czy-29/force-crlf)
+    - [fcrlf: Converter for file's CRLF line delimiter.](https://github.com/IgaguriMK/fcrlf)
+
+  除了 Rust 还有其它标准库只内置 `\n` 支持的语言吗？
+
+Applications:
+- Notepad
+
+  之前的会显示成一行。
+
+  2018-05-08 [Introducing extended line endings support in Notepad - Windows Command Line](https://devblogs.microsoft.com/commandline/extended-eol-in-notepad/)
+  - Windows 10 1809 (Windows Server 2019)
+
 ## Unicode equivalence
 [Wikipedia](https://en.wikipedia.org/wiki/Unicode_equivalence)
 
