@@ -45,6 +45,7 @@
 - Libraries
   - [PyTorch](Learning/Neural/PyTorch/README.md)
   - [MindSpore](Learning/Neural/MindSpore/README.md)
+- [Services](Learning/Neural/Services.md)
 
 ## [Symbolic Artificial Intelligence](Symbolic/README.md)
 - [→Logic](https://github.com/Chaoses-Ib/Mathematics#logic)
