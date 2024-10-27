@@ -1,0 +1,2 @@
+# Performance
+[Striking the Right Balance: Speed vs. Accuracy in Machine Learning Projects | by Abdalrazak Seaf aldean | Medium](https://medium.com/@aseafaldean/striking-the-right-balance-speed-vs-accuracy-in-machine-learning-projects-537def97f782)

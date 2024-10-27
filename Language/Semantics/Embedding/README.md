@@ -40,6 +40,7 @@ Rust:
   - No built-in GPU support...
   - 没有暴露 ort 的异步推理和终止推理的接口
   - anyhow
+  - FastEmbed is just checking `QuantizationMode` to raise error if it's dynamic and the size of batch inference is not equal to the size of chunks. See [dynamic quantization](../../../Learning/Neural/Performance/Quantization/README.md#dynamic-quantization) for details.
 
   [fastembed-bench](benches/fastembed-bench/src/main.rs)
 

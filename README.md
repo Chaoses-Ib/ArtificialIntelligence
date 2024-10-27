@@ -38,6 +38,8 @@
   - [Bootstrap Aggregating](Learning/Neural/Regularization/Bootstrap%20Aggregating.md)
   - [Early Stopping](Learning/Neural/Regularization/Early%20Stopping.md)
   - [Adversarial Training](Learning/Neural/Regularization/Adversarial%20Training.md)
+- [Performance](Learning/Neural/Performance/README.md)
+  - [Quantization](Learning/Neural/Performance/Quantization/README.md)
 - [Neural Network Formats](Learning/Neural/Formats/README.md)
   - [Open Neural Network Exchange (ONNX)](Learning/Neural/Formats/ONNX/README.md)
 - Libraries

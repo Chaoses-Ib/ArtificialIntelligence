@@ -45,3 +45,18 @@ Python:
 
 ## Convertions
 - [huggingface/optimum: 🚀 Accelerate training and inference of 🤗 Transformers and 🤗 Diffusers with easy to use hardware optimization tools](https://github.com/huggingface/optimum)
+
+## Tools
+- net drawer
+
+  [Visualizing an ONNX Model - onnx/tutorials](https://github.com/onnx/tutorials/blob/main/tutorials/VisualizingAModel.md)
+  ```
+  python -m onnx.tools.net_drawer --input "model.onnx" --output model.dot --embed_docstring
+  dot -Tsvg model.dot -o model.svg
+  ```
+  Slow for large model.
+
+- [onnx-modifier: A tool to modify ONNX models in a visualization fashion, based on Netron and Flask.](https://github.com/ZhangGe6/onnx-modifier)
+- [onnx-tool: A parser, editor and profiler tool for ONNX models.](https://github.com/ThanatosShinji/onnx-tool)
+- [zhenhuaw-me/onnxcli: ONNX Command-Line Toolbox](https://github.com/zhenhuaw-me/onnxcli) (inactive)
+  - Broken on Python 3.12?
