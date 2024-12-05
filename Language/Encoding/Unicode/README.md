@@ -47,6 +47,17 @@ General category:
   - [YesSeri/diacritics](https://github.com/YesSeri/diacritics)
   - [Tashkil: A lightweight Rust library for removing Arabic diacritics](https://github.com/LGUG2Z/tashkil)
 
+[width - The Longest Character In UTF-8 - Stack Overflow](https://stackoverflow.com/questions/42778709/the-longest-character-in-utf-8)
+
+[List of Super-Wide Symbols - Unicode Explorer](https://unicode-explorer.com/list/large)
+
+## Whitespace characters
+[Wikipedia](https://en.wikipedia.org/wiki/Whitespace_character)
+
+Longest: `\t`
+
+[Unicode spaces](https://jkorpela.fi/chars/spaces.html)
+
 ## Newlines
 [Wikipedia](https://en.wikipedia.org/wiki/Newline)
 

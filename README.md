@@ -55,6 +55,7 @@
 - [Languages](Language/Languages/README.md)
 - [Encoding](Language/Encoding/README.md)
   - [Unicode](Language/Encoding/Unicode/README.md)
+    - [Security](Language/Encoding/Unicode/Security.md)
   - [Token Encoding](Language/Encoding/Token/README.md)
 - [Segmentation](Language/Segmentation/README.md)
   - [Chunking](Language/Segmentation/Chunking.md)
