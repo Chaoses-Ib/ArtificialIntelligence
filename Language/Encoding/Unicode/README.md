@@ -14,6 +14,8 @@
 > - Unicode depends on locale for some operations and for rendering.
 > - All this is important even for pure English text.
 
+Python: [Unicode HOWTO --- Python documentation](https://docs.python.org/3/howto/unicode.html)
+
 ## Encodings
 [UTF-Random](https://www.reddit.com/r/ProgrammerHumor/comments/17ie2sm/whatatimetobealive/)
 
