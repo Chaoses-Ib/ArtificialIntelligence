@@ -53,6 +53,8 @@
 
 ## [Natural Language Processing](Language/README.md)
 - [Languages](Language/Languages/README.md)
+- [Lexicography](Language/Lexicography/README.md)
+  - [Dictionaries](Language/Lexicography/Dictionaries.md)
 - [Encoding](Language/Encoding/README.md)
   - [Unicode](Language/Encoding/Unicode/README.md)
     - [Security](Language/Encoding/Unicode/Security.md)
