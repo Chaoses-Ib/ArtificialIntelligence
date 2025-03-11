@@ -13,6 +13,10 @@
 - [Transfer Learning](Learning/Meta/Transfer/README.md)
 - [Multitask Learning](Learning/Meta/Multitask/README.md)
 
+### [Reinforcement Learning](Learning/Reinforcement/README.md)
+- [Imitation Learning](Learning/Reinforcement/Imitation/README.md)
+- [Driving](Learning/Reinforcement/Driving.md)
+
 ### [Artificial Neural Networks](Learning/Neural/README.md)
 - [Activation Functions](Learning/Neural/Activation%20Functions.md) ([Python](Learning/Neural/Activation%20Functions.ipynb))
 - [Feed-forward Neural Networks](Learning/Neural/Feed-forward.md) ([Python](Learning/Neural/Feed-forward.ipynb))
