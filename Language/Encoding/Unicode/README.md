@@ -35,15 +35,6 @@ Python: [Unicode HOWTO --- Python documentation](https://docs.python.org/3/howto
 
 [UAX #44: Unicode Character Database](https://www.unicode.org/reports/tr44/)
 
-Case:
-- Rust
-  - std
-  - [focaccia: 🍞 no_std Unicode case folding comparisons](https://github.com/artichoke/focaccia)
-  - [unicase: Unicode Case-folding for Rust](https://github.com/seanmonstar/unicase)
-  - [rust-caseless: Unicode caseless matching](https://github.com/unicode-rs/rust-caseless) (discontinued)
-  - [str Utils: This crate provides some traits to extend types which implement `AsRef<[u8]>` or `AsRef<str>`.](https://github.com/magiclen/str-utils)
-    - [Documentation about Unicode normalization - Issue #2 - magiclen/str-utils](https://github.com/magiclen/str-utils/issues/2)
-
 General category:
 - Rust
   - [YesSeri/diacritics](https://github.com/YesSeri/diacritics)
@@ -52,6 +43,36 @@ General category:
 [width - The Longest Character In UTF-8 - Stack Overflow](https://stackoverflow.com/questions/42778709/the-longest-character-in-utf-8)
 
 [List of Super-Wide Symbols - Unicode Explorer](https://unicode-explorer.com/list/large)
+
+### Case
+[Letter case - Wikipedia](https://en.wikipedia.org/wiki/Letter_case)
+
+#### Rust
+- std
+  - Binary search, relatively slow
+  - [case-conv: Faster case conversion crate](https://github.com/conradludgate/case-conv/)
+- [IbPinyinLib/src/unicode/case/mod.rs](https://github.com/Chaoses-Ib/IbPinyinLib/blob/master/src/unicode/case/mod.rs)
+  - Mono case
+- [unicase: Unicode Case-folding for Rust](https://github.com/seanmonstar/unicase)
+  - Map / Jump maps
+  - No `char` interface
+    - [Character iterator comparison - Issue #42 - seanmonstar/unicase](https://github.com/seanmonstar/unicase/issues/42)
+  - [str Utils: This crate provides some traits to extend types which implement `AsRef<[u8]>` or `AsRef<str>`.](https://github.com/magiclen/str-utils)
+    - [Documentation about Unicode normalization - Issue #2 - magiclen/str-utils](https://github.com/magiclen/str-utils/issues/2)
+  - Used by Cargo, Clap, rusqlite, pingora
+- [focaccia: 🍞 no_std Unicode case folding comparisons](https://github.com/artichoke/focaccia)
+  - Turkic
+  - No `char` interface
+- [unicode-case-mapping: Fast mapping of char to lowercase, uppercase, or titlecase in Rust.](https://github.com/yeslogic/unicode-case-mapping)
+
+  > The tables take up about 101KiB. Benchmarks show this approach to be ~5–10× faster than the binary search approach used in the Rust standard library.
+- [rust-caseless: Unicode caseless matching](https://github.com/unicode-rs/rust-caseless) (discontinued)
+  - Binary search
+- [uncased: Case-preserving, ASCII case-insensitive `no_std` string types for Rust.](https://github.com/SergioBenitez/uncased)
+
+[Performance issue: can I avoid of using the slow `to_lowercase` function? : r/rust](https://www.reddit.com/r/rust/comments/6wbru2/performance_issue_can_i_avoid_of_using_the_slow/)
+
+[Case insensitive match pattern - Rust Internals](https://internals.rust-lang.org/t/case-insensitive-match-pattern/8049)
 
 ## Whitespace characters
 [Wikipedia](https://en.wikipedia.org/wiki/Whitespace_character)
