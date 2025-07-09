@@ -36,3 +36,7 @@ Python:
 - [Python](https://github.com/thunlp/THULAC-Python)
 
 最后更新于 2018 年。
+
+## 日本語
+- [crumblingstatue/mugo: Japanese deconjugation library for Rust](https://github.com/crumblingstatue/mugo)
+  - [crumblingstatue/mugo-jmdict: Library for integrating mugo with jmdict](https://github.com/crumblingstatue/mugo-jmdict)

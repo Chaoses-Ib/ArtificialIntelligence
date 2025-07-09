@@ -11,4 +11,10 @@
 Reddit:
 - [r/LanguageTechnology](https://www.reddit.com/r/LanguageTechnology/top/?t=week)
 
+## 日本語
+[taishi-i/awesome-japanese-nlp-resources: A curated list of resources dedicated to Python libraries, LLMs, dictionaries, and corpora of NLP for Japanese](https://github.com/taishi-i/awesome-japanese-nlp-resources)
+
+[JojiiOfficial/jp\_utils: Rust crate providing some basic utilities for working with Japanese text](https://github.com/JojiiOfficial/jp_utils)
+
+
 [^wiki]: [Natural language processing - Wikipedia](https://en.wikipedia.org/wiki/Natural_language_processing)
