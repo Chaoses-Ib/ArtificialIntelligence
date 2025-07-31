@@ -62,6 +62,7 @@
   - [Dictionaries](Language/Lexicography/Dictionaries.md)
 - [Encoding](Language/Encoding/README.md)
   - [Unicode](Language/Encoding/Unicode/README.md)
+    - [Characters](Language/Encoding/Unicode/Characters.md)
     - [Security](Language/Encoding/Unicode/Security.md)
   - [Token Encoding](Language/Encoding/Token/README.md)
 - [Input Methods](Language/Input/README.md)
