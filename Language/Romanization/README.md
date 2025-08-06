@@ -1,6 +1,12 @@
 # Romanization
 [Wikipedia](https://en.wikipedia.org/wiki/Romanization)
 
+## Libraries
+Rust:
+- [uroman-rs: A self-contained Rust reimplementation of uroman, a universal romanizer.](https://github.com/fulm-o/uroman-rs)
+
+  [I created uroman-rs, a 22x faster rewrite of uroman, a universal romanizer. : r/rust](https://www.reddit.com/r/rust/comments/1mitfxj/i_created_uromanrs_a_22x_faster_rewrite_of_uroman/)
+
 ## 日本語
 [ローマ字 - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97), [Wikipedia](https://en.wikipedia.org/wiki/Romanization_of_Japanese)
 
