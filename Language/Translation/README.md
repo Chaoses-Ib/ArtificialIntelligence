@@ -107,6 +107,8 @@ Tools:
 
 [Translators: 🌏🌍🌎Translators🌎🌍🌏 is a library that aims to bring free, multiple, enjoyable translations to individuals and students in Python. Translators是一个旨在用Python为个人和学生带来免费、多样、愉快翻译的库。](https://github.com/UlionTse/translators)
 
+[\[使用讨论\]\[沉浸式翻译插件\]哪个翻译引擎最好用？(英译中 日译中) - 问题求助 - 小众软件官方论坛](https://meta.appinn.net/t/topic/51833)
+
 ### Google Translate
 - [py-googletrans: (unofficial) Googletrans: Free and Unlimited Google translate API for Python. Translates totally free of charge.](https://github.com/ssut/py-googletrans)
 - [google\_trans\_new: A free and unlimited python API for google translate.](https://github.com/lushan88a/google_trans_new)

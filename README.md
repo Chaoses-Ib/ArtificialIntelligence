@@ -85,6 +85,7 @@
     - [Reciprocal Rank Fusion](Language/Search/Document/Reciprocal.md)
 - [Translation](Language/Translation/README.md)
   - [Evaluation](Language/Translation/Evaluation.md)
+  - [Tools](Language/Translation/Tools.md)
 - [Internationalization and Localization](Language/I18n/README.md)
   - [OS](Language/I18n/OS.md)
 - [Chatbots](Language/Chatbots.md)
