@@ -18,13 +18,18 @@
 Extensions:
 - [KISS Translator: A simple, open source bilingual translation extension & Greasemonkey script (一个简约、开源的 双语对照翻译扩展 & 油猴脚本)](https://github.com/fishjar/kiss-translator)
   - GPL-3
-  - LLM
-    - Custom prompt
+  - Services
+    - 默认微软翻译
+    - Google2: [同样使用google翻译, 翻译结果质量有区别? - Issue #247](https://github.com/fishjar/kiss-translator/issues/247)
+    - LLM
+      - Custom prompt
   - 双语对照
   - 规则
-  - 划词翻译
+  - 划词翻译、悬浮球
+    - 默认开启
   - 收藏词汇
   - 输入框翻译
+  - 设置同步: 不支持浏览器同步，只支持自建或 WebDAV
 
   [Geek on X: "试试沉浸式翻译的平替《简约翻译》 一个简约、开源的双语对照翻译扩展 & 油猴脚本。看了一下还不错，支持的翻译服务挺多，有社区订阅规则、数据同步功能、翻译接口代理、简约词典插件，这大佬搞了一整套，我滴神！自己部署，自己管理。 GitHub https://t.co/pWxIjkb54B https://t.co/o038I9lzFo" / X](https://x.com/geekbb/status/1780430999891140974)
 
@@ -60,6 +65,8 @@ Extensions:
       [沉浸式翻译将禁止使用未认证的第三方 api 接口 - V2EX](https://www.v2ex.com/t/1151127)
       - [沉浸式翻译将封禁未经认证的第三方 API - V2EX](https://www.v2ex.com/t/1151144)
       - [关于沉浸式翻译计划禁用一些第三方自定义 key 提供方的补充说明 - V2EX](https://www.v2ex.com/t/1151145)
+      - [我是"流畅阅读"的作者，借着沉浸式翻译这件事，我想说几句 - V2EX](https://www.v2ex.com/t/1151203)
+      - [闭源被收购插件沉浸式翻译被曝存储传播用户信息，有无代替？最好是开源的 - V2EX](https://www.v2ex.com/t/1151194)
 
       [沉浸式翻译将禁止使用第三方api接口 - 前沿快讯 - LINUX DO](https://linux.do/t/topic/852576)
       - [\[求助\] 有没有能替代沉浸式翻译得插件 - 开发调优 - LINUX DO](https://linux.do/t/topic/852722)
@@ -68,6 +75,7 @@ Extensions:
 
       [沉浸式翻译导致敏感信息泄露 @hatschannel](https://t.me/c1670316433/36920)
       - [/ipfs/bafybeif5252mts5egpvjixz3nsysljda56hiazsggezbrvcpajhla5mriy/](https://ipfs.io/ipfs/bafybeif5252mts5egpvjixz3nsysljda56hiazsggezbrvcpajhla5mriy/)
+      - [沉浸式翻译被爆泄露政府红头文件](https://www.nodeseek.com/post-417762-1)
 
 - [有道灵动翻译](https://chromewebstore.google.com/detail/%E6%9C%89%E9%81%93%E7%81%B5%E5%8A%A8%E7%BF%BB%E8%AF%91/jlpcnoohcpfgpbalhlggdhjocgnlgafn)
 
