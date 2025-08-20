@@ -47,12 +47,31 @@ General category:
 ### Case
 [Letter case - Wikipedia](https://en.wikipedia.org/wiki/Letter_case)
 
+[Case mapping - Globalization | Microsoft Learn](https://learn.microsoft.com/en-us/globalization/text/case-mapping)
+
+> Case folding (mapping strings to a canonical form for string comparison) typically results in lowercase characters; however, characters in the Cherokee script resolve to uppercase characters. Case folding isn't context-, language-, or locale-sensitive; however, you can specify whether to use mappings for languages like Turkish.
+
+[unicode.org/Public/16.0.0/ucd/CaseFolding.txt](https://www.unicode.org/Public/16.0.0/ucd/CaseFolding.txt)
+- C: common case folding, common mappings shared by both simple and full mappings.
+- F: full case folding, mappings that cause strings to grow in length. Multiple characters are separated by spaces.
+- S: simple case folding, mappings to single characters where different from F.
+- T: special case for uppercase `I` and dotted uppercase `I`
+  - For non-Turkic languages, this mapping is normally not used.
+  - For Turkic languages (tr, az), this mapping can be used instead of the normal mapping for these characters.  
+    Note that the Turkic mappings do not maintain canonical equivalence without additional processing.  
+    See the discussions of case mapping in the Unicode Standard for more information.
+
 #### Rust
 - std
   - Binary search, relatively slow
+  - [Unicode `to_lower()` and `to_upper` - Issue #9363](https://github.com/rust-lang/rust/issues/9363)
+  - [Implement full `to_{upper,lower}case` algorithms - Issue #25800](https://github.com/rust-lang/rust/issues/25800)
+  - [Add complex case mapping and title case mapping. by SimonSapin - Pull Request #26039](https://github.com/rust-lang/rust/pull/26039)
+  - [Separate `to_lowercase()` into correct Unicode and simple implementations - Issue #26244](https://github.com/rust-lang/rust/issues/26244)
+  - [`to_lowercase` only uses unconditional parts of unicode.org's special-casing - Issue #51362](https://github.com/rust-lang/rust/issues/51362)
   - [case-conv: Faster case conversion crate](https://github.com/conradludgate/case-conv/)
-- [IbPinyinLib/src/unicode/case/mod.rs](https://github.com/Chaoses-Ib/IbPinyinLib/blob/master/src/unicode/case/mod.rs)
-  - Mono case
+- [ib_unicode::case](https://docs.rs/ib-unicode/latest/ib_unicode/case/)
+  - Mono case (simple case folding)
 - [unicase: Unicode Case-folding for Rust](https://github.com/seanmonstar/unicase)
   - Map / Jump maps
   - No `char` interface
@@ -181,6 +200,7 @@ Applications:
 - Rust
   - [UNIC: Unicode and Internationalization Crates for Rust](https://github.com/open-i18n/rust-unic)
   - [unicode-rs](https://github.com/unicode-rs)
+  - [BurntSushi/ucd-generate: A command line tool to generate Unicode tables as source code.](https://github.com/BurntSushi/ucd-generate)
 
 ## Text::Unidecode
 - Perl: [Text::Unidecode - plain ASCII transliterations of Unicode text - metacpan.org](https://metacpan.org/pod/Text::Unidecode)
