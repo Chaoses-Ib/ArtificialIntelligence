@@ -3,9 +3,16 @@
 
 [Electronic dictionary - Wikipedia](https://en.wikipedia.org/wiki/Electronic_dictionary)
 
+[FreeMdict Forum - 自由 无门槛 免费](https://forum.freemdict.com/)
+
+[PDAWIKI 存档 - PDAWIKI历史贴文](https://061061.xyz/)
+
 ## Formats
 - [odict: A blazingly-fast, offline-first format and toolchain for lexical data 📖](https://github.com/TheOpenDictionary/odict)
   - `scoop install odict`
+
+[萌新请问MDD和MDX两种的词典格式有什么具体区别吗 - Eudic - 欧路词典 - 掌上百科 - PDAWIKI - Powered by Discuz!](https://www.pdawiki.com/forum/thread-34455-1-1.html)
+> mdx可以单个就是词典，一些简单的词典都是单个mdx文件。mdd里是音频和图片资源，相对大的多。
 
 ## Tools
 - [GoldenDict: A feature-rich dictionary lookup program, supporting multiple dictionary formats (StarDict/Babylon/Lingvo/Dictd) and online dictionaries, featuring perfect article rendering with the complete markup, illustrations and other content retained, and allowing you to type in words without any accents or correct case.](https://github.com/goldendict/goldendict) (inactive)
@@ -29,12 +36,16 @@
     - Interface Font: 中文从宋体变为了微软雅黑
     - Fallback Fonts
     - Hotkey `Ctrl+C, Ctrl+C` 与原版显示不同：`Ctrl+C+C` → `Ctrl+C, Ctrl+C`
+  - [Transliteration](https://xiaoyifang.github.io/goldendict-ng/manage_sources/#transliteration)
   - Anki Connect
   - 与原版配置不完全兼容
 
   [配置GoldenDict - 知乎](https://zhuanlan.zhihu.com/p/673333066)
 
+  [Latest 软件经验交流展望/GoldenDict-ng topics - FreeMdict Forum](https://forum.freemdict.com/c/dicttool/goldendictng/32)
+
 ## Dictionaries
+- [Wiktionary](https://www.wiktionary.org/)
 - [cihai/cihai: Python library for CJK (Chinese, Japanese, and Korean) language dictionary](https://github.com/cihai/cihai)
 
 ## 日本語
@@ -53,6 +64,8 @@
     - [scriptin/jmdict-simplified: JMdict, JMnedict, Kanjidic, KRADFILE/RADKFILE in JSON format](https://github.com/scriptin/jmdict-simplified)
       - Rust: [jmdict-rs: Simple interface for interacting with JMdict Japanese dictionary](https://github.com/piropaolo/jmdict-rs)
     - [aecsocket/wordbase: Language-learning-focused dictionary engine](https://github.com/aecsocket/wordbase)
+
+    [JMdict - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/15567)
   - [ENAMDICT/JMnedict Documentation](https://www.edrdg.org/enamdict/enamdict_doc.html)
 
     > Japanese proper names; place-names, surnames, given names, company names, names of artistic and literary works, product names, etc.. These were originally included in the EDICT file, along with other non-name entries. By late 1995, the number of name entries had exceeded the others, and the file was becoming unmanageably large, so the decision was made to split it.
@@ -103,6 +116,9 @@ Libraries:
 - [SamuraiT/mecab-python3: :snake: mecab-python. you can find original version here:http://taku910.github.io/mecab/](https://github.com/SamuraiT/mecab-python3)
   - [polm/fugashi: A Cython MeCab wrapper for fast, pythonic Japanese tokenization and morphological analysis.](https://github.com/polm/fugashi)
 - [lindera: A multilingual morphological analysis library.](https://github.com/lindera/lindera)
+- [NonJishoKei/NonJishoKei: \[WIP\] This is a lightweight morphological analyzer designed for Japanese dictionary retrieval. |「正在开发中」这是一个为辞典检索设计的轻量形态素解析器。](https://github.com/NonJishoKei/NonJishoKei)
+
+  [真-哪里不会点哪里\_日本語非辞書形辞典\_v2 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/14048)
 
 [Grammatical, automatic furigana with SQLite and Rust - GeekLaunch](https://geeklaunch.io/blog/grammatical-automatic-furigana-with-sqlite-and-rust/) ([r/rust](https://www.reddit.com/r/rust/comments/10qzjsl/grammatical_automatic_furigana_with_sqlite_and/))
 > You might want to consider switching to UniDic as it's a lot bigger and vastly superior to IPADIC from my experience.
@@ -118,3 +134,34 @@ Libraries:
 > MeCab with ipadic and a lot of custom swift logic for fixing issue patterns and matching to JMDict entries as an additional heuristic that the stemming/token was done right. I’m also using a custom generated JLPT classification (a more complete guess at what the full set of JLPT vocab is based on ebook word freq) to choose more likely candidate results. I haven’t improved this in a couple years, it’s one of my upcoming focuses now that I have the app rewritten and out.
 > 
 > Unidic also interesting but harder to use and huge data size.
+
+### Learning
+- [【小学馆】日中辞典第三版 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/11001/51)
+- [【小学館】例解学習国語辞典［第九版］ - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/18491/59)
+- [明鏡国語辞典 第三版 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/16146/66)
+- [日汉双解词典 乱码修复版【20231101更新】 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/3150)
+  - [《新世纪日汉双解大辞典》补档 + 替补css - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/5042)
+- [【小学馆】大辞泉（202304数据） - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/11703)
+- [（三省堂）スーパー大辞林［第四版］ - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/22477)
+- [広辞苑 第七版 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/15882/27)
+- [日本国語大辞典 第二版 - 添加阅读同义词/修复超链接 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/15442)
+  - [日本国語大辞典 第二版 - 清洁CSS - 词典装饰排版交流分享 - FreeMdict Forum](https://forum.freemdict.com/t/topic/15451/15)
+- [[2021.04.01][重新生成词头 实现精确查询]NHK日语真人语音库 - MDict 词库资源区 - MDict Dictionaries - 掌上百科 - PDAWIKI - Powered by Discuz! ](https://o.061061.xyz/42258.html)
+  - [NHK日本語発音アクセント辞書 - Google Drive](https://drive.google.com/drive/folders/15LjkcOT-5pbA-CBHKkqzK6BIT5RKixdH)
+  - [NHK日语发音音调词典 一个非常简陋的美化改版 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/24251)
+  - [研究了一下物書堂的文件格式，提取了完整版NHK 日本語発音アクセント新辞典 - 技术交流与词典编修 - FreeMdict Forum](https://forum.freemdict.com/t/topic/40944)
+  - [物書堂: NHK 日本語発音アクセント新辞典 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/38771)
+  - [日本語辞書3種のMdict版 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/39200/36)
+
+  [求NHK发音词典！呜呜呜向大佬们磕头了 - 资源求助 - FreeMdict Forum](https://forum.freemdict.com/t/topic/14563)
+- [ピクシブ百科事典 (概要のみ) 20240224 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/26793/24)
+  - http://dic.pixiv.net/search?query=%GDWORD%
+  - http://dic.pixiv.net/a/%GDWORD%
+
+[求教日语达人： 初学者想找几本日汉电子词典，要求如下，什么词典合适呢？ - 词典及语言学习交流 - FreeMdict Forum](https://forum.freemdict.com/t/topic/28098)
+
+[日语mdx 下载点小集合 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/15856)
+
+[分享一些不在日语分区而难找的词典 - 日语 - FreeMdict Forum](https://forum.freemdict.com/t/topic/13941)
+
+[日语学习之：在 GoldenDict 下日语词典查词 | Verne in GitHub](https://blog.einverne.info/post/2022/10/japanese-goldendict-dictionary.html)
