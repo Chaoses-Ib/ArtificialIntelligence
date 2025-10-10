@@ -87,7 +87,8 @@
   - [Evaluation](Language/Translation/Evaluation.md)
   - [Tools](Language/Translation/Tools.md)
 - [Internationalization and Localization](Language/I18n/README.md)
-  - [OS](Language/I18n/OS.md)
+  - [OS](Language/I18n/OS/README.md)
+    - [Windows](Language/I18n/OS/Windows.md)
 - [Chatbots](Language/Chatbots.md)
 - Regularization
   - [Data Augmentation](Language/Regularization/Data%20Augmentation.md)

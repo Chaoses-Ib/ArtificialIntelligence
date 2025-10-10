@@ -1,14 +1,4 @@
-# OS
-- [1Password/sys-locale: A small and lightweight Rust library to obtain the active locale on the system.](https://github.com/1Password/sys-locale)
-  - Multiple languages
-  - [Get preferred system locales - Issue #14](https://github.com/1Password/sys-locale/issues/14)
-  - [Replace windows-sys with windows-bindgen - 1Password/sys-locale@dfa5759](https://github.com/1Password/sys-locale/commit/dfa57595943a838310e7b7f68c9a281e1992f477)
-- [ardaku/whoami: Rust library for getting information about the current user and environment.](https://github.com/ardaku/whoami)
-  - Multiple languages: [`LanguagePrefs`](https://docs.rs/whoami/2.0.0-pre.2/whoami/struct.LanguagePrefs.html)
-  - Non-BCP-47 [`Language`](https://docs.rs/whoami/latest/whoami/enum.Language.html): `en/US`
-- [rust-locale/locale\_config: Rust crate to maintain locale preferences for process and thread and initialising them by inspecting the system for user preference.](https://github.com/rust-locale/locale_config) (discontinued)
-
-## Windows
+# Windows
 [National Language Support - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/intl/national-language-support)
 
 [Locales and Languages - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/intl/locales-and-languages)
@@ -18,7 +8,7 @@
 
 Basically, "language" is language and "locale" is formatting format.
 
-### Languages
+## Languages
 [User Interface Language Management - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/intl/user-interface-language-management)
 
 [Language Identifiers - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/intl/language-identifiers)
@@ -62,7 +52,7 @@ winnls.h:
 
 [wine/dlls/ntdll/locale.c at 7c7b3e43047a26789f1cbd5b3a04a37a3d08e2bd - wine-mirror/wine](https://github.com/wine-mirror/wine/blob/7c7b3e43047a26789f1cbd5b3a04a37a3d08e2bd/dlls/ntdll/locale.c#L244)
 
-### Locales
+## Locales
 Locales, regions
 
 [Pseudo-Locales - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/intl/pseudo-locales)
@@ -113,3 +103,30 @@ Locales, regions
 - `LOCALE_USER_DEFAULT` (0x400): Region, not preferred languages and Windows display language
 - `LOCALE_SYSTEM_DEFAULT`
 - [`LOCALE_CUSTOM_*`](https://learn.microsoft.com/en-us/windows/win32/intl/locale-custom-constants)
+
+## Programs
+- [Application manifests: `activeCodePage`](https://learn.microsoft.com/en-us/windows/win32/sbscs/application-manifests#activecodepage)
+  - `UTF-8`
+  - `ja-JP`
+  
+  [The `activeCodePage` manifest element can be used for more than just setting UTF-8 as the active code page - The Old New Thing](https://devblogs.microsoft.com/oldnewthing/20220531-00/?p=106697)
+  > Windows 11（20348+）允许通过外部清单文件强制指定程序的代码页到非UTF-8。
+
+  [Code search results: activeCodePage manifest "ja-JP"](https://github.com/search?q=activeCodePage%20manifest%20%22ja-JP%22&ref=opensearch&type=code)
+- Wine: `LANG=ja_JP`
+
+Tools:
+- [Locale Emulator: Yet Another System Region and Language Simulator](https://github.com/xupefei/Locale-Emulator) (discontinued)
+  - x86-32 only
+  - `scoop install locale-emulator`
+- [Locale Remulator: System Region and Language Simulator.](https://github.com/InWILL/Locale_Remulator)
+
+  [Reddit - The heart of the internet](https://www.reddit.com/r/visualnovels/comments/15khvch/after_locale_emulator_here_comes_locale_remulator/)
+- [ntlea](https://github.com/zxyacb/ntlea) (discontinued)
+  - Ntleas (discontinued)
+
+  [NTLEA - NamuWiki](https://en.namu.wiki/w/NTLEA)
+
+[windows - How to launch a 64-bit program with a different locale than the system locale? - Super User](https://superuser.com/questions/905522/how-to-launch-a-64-bit-program-with-a-different-locale-than-the-system-locale)
+
+[Is there any safe local emulator? : r/visualnovels](https://www.reddit.com/r/visualnovels/comments/zajsue/is_there_any_safe_local_emulator/)
