@@ -10,6 +10,8 @@ Benchmarks:
 - [Chatbot Arena Leaderboard - a Hugging Face Space by lmsys](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)
 - [EvalPlus Leaderboard](https://evalplus.github.io/leaderboard.html)
 
+[Which models would I be able to run with RTX 5090 with 32GB Vram? : r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1hkdzne/which_models_would_i_be_able_to_run_with_rtx_5090/)
+
 [→Agents](../../Agents.md#llm)
 
 [awesome-chatgpt: A curated list of awesome ChatGPT related projects.](https://github.com/uhub/awesome-chatgpt)

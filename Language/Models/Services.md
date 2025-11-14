@@ -4,6 +4,7 @@
 
 History:
 - 2024-04 [现在个人用户订阅大语言模型的最划算的方法是什么？ - V2EX](https://www.v2ex.com/t/1036778)
+- 2024-06 [Is it even worth running a home LLM for code completion? : r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1di9c15/is_it_even_worth_running_a_home_llm_for_code/)
 
 ## OpenAI
 [What is the difference between the GPT-4 models? | OpenAI Help Center](https://help.openai.com/en/articles/7127966-what-is-the-difference-between-the-gpt-4-models)
