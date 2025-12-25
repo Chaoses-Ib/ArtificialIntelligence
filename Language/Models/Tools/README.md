@@ -1,2 +1,2 @@
 # Tools
-- [→Ollama](Ollama.md)
+- [→Ollama](llama.cpp/Ollama.md)

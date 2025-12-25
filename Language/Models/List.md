@@ -12,7 +12,7 @@
 
 ## Gemma
 - [princeton-nlp/gemma-2-9b-it-SimPO](https://huggingface.co/princeton-nlp/gemma-2-9b-it-SimPO)
-  - [JustData/gemma-2-9b-it-SimPO-Q8\_0-GGUF](https://huggingface.co/JustData/gemma-2-9b-it-SimPO-Q8_0-GGUF)
+  - [JustData/gemma-2-9b-it-SimPO-Q8_0-GGUF](https://huggingface.co/JustData/gemma-2-9b-it-SimPO-Q8_0-GGUF)
     - ModelScope: [newsletter/gemma-2-9b-it-SimPO-Q8_0-GGUF](https://www.modelscope.cn/models/newsletter/gemma-2-9b-it-SimPO-Q8_0-GGUF)
   - 默认输出比较短，不过审查确实比较少。
   - 中文输出中可能会偶尔混杂英文词。
@@ -22,7 +22,7 @@
 - QwQ
   - [QwQ-32B](https://huggingface.co/Qwen/QwQ-32B)
     - [huihui-ai/QwQ-32B-abliterated](https://huggingface.co/huihui-ai/QwQ-32B-abliterated)
-      - [bartowski/huihui-ai\_QwQ-32B-abliterated-GGU](https://huggingface.co/bartowski/huihui-ai_QwQ-32B-abliterated-GGUF)
+      - [bartowski/huihui-ai_QwQ-32B-abliterated-GGU](https://huggingface.co/bartowski/huihui-ai_QwQ-32B-abliterated-GGUF)
 
 ### Qwen3
 - [Qwen3-Coder](https://qwen.ai/blog?id=qwen3-coder)

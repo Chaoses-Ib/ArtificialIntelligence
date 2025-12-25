@@ -1,3 +1,5 @@
+#import "@local/ib:0.1.0": *
+#md(```
 # [Ollama](https://ollama.com/)
 [GitHub](https://github.com/ollama/ollama)
 
@@ -26,3 +28,8 @@
   - [Client2 Feedback - Issue #10331](https://github.com/ollama/ollama/issues/10331)
   - [Ollama加载ModelScope模型 - 文档中心](https://modelscope.cn/docs/models/advanced-usage/ollama-integration)
     - > 默认情况下，如果模型repo里有Q4_K_M版本的话，我们会自动拉取并使用该版本，在推理精度以及推理速度，资源消耗之间做一个较好的均衡。如果没有该版本，我们会选择合适的其他版本。
+```)
+
+= Tools
+- #a[ex3ndr/llama-coder: Replace Copilot local AI][https://github.com/ex3ndr/llama-coder]
+  (discontinued)
