@@ -64,6 +64,7 @@
   - [Unicode](Language/Encoding/Unicode/README.md)
     - [Characters](Language/Encoding/Unicode/Characters.md)
     - [Security](Language/Encoding/Unicode/Security.md)
+    - [UAX 31 Unicode Identifiers and Syntax](<Language/Encoding/Unicode/UAX 31 Identifiers and Syntax.typ>)
   - [Token Encoding](Language/Encoding/Token/README.md)
 - [Input Methods](Language/Input/README.md)
 - [Romanization](Language/Romanization/README.md)

@@ -195,6 +195,7 @@ Applications:
   - C: [ICU4C](https://github.com/unicode-org/icu/tree/main/icu4c)
   - Java: [ICU4J](https://github.com/unicode-org/icu/tree/main/icu4j)
   - Rust: [ICU4X: Solving i18n for client-side and resource-constrained environments.](https://github.com/unicode-org/icu4x)
+    - [State of Unicode in Rust - Issue #7274](https://github.com/unicode-org/icu4x/issues/7274)
 
     [icu vs rust_icu : rust ](https://www.reddit.com/r/rust/comments/q4xaig/icu_vs_rust_icu/)
 - Rust
