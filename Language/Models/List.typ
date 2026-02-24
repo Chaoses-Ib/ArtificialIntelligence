@@ -1,4 +1,6 @@
-# Model List
+#import "@local/ib:0.1.0": *
+#title[Language Model List]
+#md(```
 - 2024-10 [Best LLM for code completion? : r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1fwigff/best_llm_for_code_completion/)
 - 2025-07 [What's the best local LLM for coding? : r/LocalLLM](https://www.reddit.com/r/LocalLLM/comments/1m5rzgf/whats_the_best_local_llm_for_coding/)
   - Deepseek R1
@@ -47,3 +49,4 @@ Abliterated:
 ## Mistral
 - [mradermacher/Dolphin-Mistral-24B-Venice-Edition-i1-GGUF](https://huggingface.co/mradermacher/Dolphin-Mistral-24B-Venice-Edition-i1-GGUF)
   - ModelScope: [mradermacher/Dolphin-Mistral-24B-Venice-Edition-i1-GGUF](https://www.modelscope.cn/models/mradermacher/Dolphin-Mistral-24B-Venice-Edition-i1-GGUF)
+```)
