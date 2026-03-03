@@ -85,6 +85,8 @@
     - [llama.cpp](Language/Models/Tools/llama.cpp/README.typ)
       - [Ollama](Language/Models/Tools/llama.cpp/Ollama.typ)
   - [List](Language/Models/List.md)
+  - [API Gateways](Language/Models/Gateway/README.typ)
+    - [LiteLLM](Language/Models/Gateway/LiteLLM.typ)
   - [Services](Language/Models/Services.md)
 - [Search](Language/Search/README.md)
   - [Document Retrieval](Language/Search/Document/README.md)
