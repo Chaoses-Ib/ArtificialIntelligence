@@ -7,6 +7,8 @@ Python:
 
 Rust:
 - #a([TensorZero], <tensorzero>)
+- #a[farion1231/cc-switch: A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode & Gemini CLI.][https://github.com/farion1231/cc-switch]
+  - Chinese
 - #a[katanemo/plano: Plano is an AI-native proxy and data plane for agentic apps --- with built-in orchestration, safety, observability, and smart LLM routing so you stay focused on your agents core logic.][https://github.com/katanemo/plano]
   - No cost tracking
 

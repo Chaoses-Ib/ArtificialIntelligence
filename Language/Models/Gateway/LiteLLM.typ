@@ -5,14 +5,19 @@
 #q[Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native) format, with cost tracking, guardrails, loadbalancing and logging.
 [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, VLLM, NVIDIA NIM]]
 
+- Quality is just so-so.
+
 = Deployment
 - ```sh uv run litellm[proxy]```
 
 - DB: PostgreSQL
 
-- RAM: \~100M
+- RAM: \~100\~500M
 
-- Docker: #a[`docker-compose.yml`][https://github.com/BerriAI/litellm/blob/main/docker-compose.yml]
+- Docker
+  - #a[`Dockerfile`][https://github.com/BerriAI/litellm/blob/main/Dockerfile]
+    - #a[`docker.litellm.ai/berriai/litellm-non_root`][https://github.com/BerriAI/litellm/blob/main/docker/Dockerfile.non_root]
+  - #a[`docker-compose.yml`][https://github.com/BerriAI/litellm/blob/main/docker-compose.yml]
 
   #a[Getting Started Tutorial | liteLLM][https://docs.litellm.ai/docs/proxy/docker_quick_start]
   - #a[What is the difference between the normal and database container? - BerriAI/litellm - Discussion \#5276][https://github.com/BerriAI/litellm/discussions/5276]
@@ -40,8 +45,26 @@ Issues:
   ```
 
 = Security
+- Non-root (`nobody`): #a[`docker.litellm.ai/berriai/litellm-non_root`][https://github.com/BerriAI/litellm/blob/main/docker/Dockerfile.non_root]
+  - `PROXY_BASE_URL` not available?
+
 - Model API and admin API are on the same port and base path.
+  - #a[```sh SERVER_ROOT_PATH="/api/v1"```][https://docs.litellm.ai/docs/proxy/custom_root_ui]
+    #footnote[#a[[Bug]: UI not working anymore with custom root path - Issue \#20011 - BerriAI/litellm][https://github.com/BerriAI/litellm/issues/20011]]
+  - `UI_BASE_PATH="/litellm/ui"`
+    #footnote[#a[[Bug]: Custom server root path not working properly - Issue \#10761 - BerriAI/litellm][https://github.com/BerriAI/litellm/issues/10761]]
+  - `PROXY_BASE_URL=https://litellm-api.up.railway.app`
+    #footnote[#a[✨ SSO for Admin UI | liteLLM][https://docs.litellm.ai/docs/proxy/admin_ui_sso#step-3-set-proxy_base_url-in-your-env]]
+    #footnote[#a[[Bug]: Custom Proxy Base Url not working - Issue \#5997 - BerriAI/litellm][https://github.com/BerriAI/litellm/issues/5997]]
+    (or ```nginx proxy_set_header Host $host```
+    #footnote[#a[Using Nginx - vLLM][https://docs.vllm.ai/en/v0.10.1/deployment/nginx.html#create-simple-nginx-config-file]]
+    )
+    - Needed for working properly, otherwise:
+      ```json {"redirect_url":"http://127.0.0.1:4000/ui/?login=success"}```.
+
 - Too many APIs.
+
+- #a[Litellm CVEs and Security Vulnerabilities - OpenCVE][https://app.opencve.io/cve/?vendor=litellm]
 
 = Enterprise
 - Team admin
