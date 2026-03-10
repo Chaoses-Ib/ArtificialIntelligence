@@ -116,11 +116,53 @@ Abliterated:
 
   #a[Qwen3-Coder-Next is now the \#1 most downloaded model on Unsloth! : r/unsloth][https://www.reddit.com/r/unsloth/comments/1rcjrux/qwen3codernext_is_now_the_1_most_downloaded_model/]
 
+  #a[Qwen3-Coder-Next is the top model in SWE-rebench \@ Pass 5. I think everyone missed it. : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rn476o/qwen3codernext_is_the_top_model_in_swerebench/]
+
 - #a[Qwen3.5: Towards Native Multimodal Agents][https://qwen.ai/blog?id=qwen3.5]
+  - #a[Qwen3.5 - How to Run Locally Guide | Unsloth Documentation][https://unsloth.ai/docs/models/qwen3.5]
+    - #a[Qwen3.5 GGUF Benchmarks | Unsloth Documentation][https://unsloth.ai/docs/models/qwen3.5/gguf-benchmarks]
+  - #a[AesSedai/Qwen3.5-35B-A3B-GGUF - Hugging Face][https://huggingface.co/AesSedai/Qwen3.5-35B-A3B-GGUF]
+    #a-badge[https://modelscope.cn/models/AesSedai/Qwen3.5-35B-A3B-GGUF]
+    - ```sh llama-server -hf AesSedai/Qwen3.5-35B-A3B-GGUF:Q5_K_M --temp 0.6 --top-k 20 --top-p 0.95 --min-p 0.00 -c 256000```
+    - ```sh llama-server -hf AesSedai/Qwen3.5-35B-A3B-GGUF:Q5_K_M --temp 0.7 --top-k 20 --top-p 0.8 --min-p 0.00 -c 256000 --chat-template-kwargs '{"enable_thinking":false}'```
+    - #a[Request for GGUF Update: Qwen 3.5 DeltaNet GPU Offloading Compatibility][https://huggingface.co/AesSedai/Qwen3.5-35B-A3B-GGUF/discussions/6]
 
   #a[Which one are you waiting for more: 9B or 35B? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rbkeea/which_one_are_you_waiting_for_more_9b_or_35b/]
 
   #a[New Qwen3.5 models spotted on qwen chat : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rdfhfx/new_qwen35_models_spotted_on_qwen_chat/]
+
+  Variants:
+  - #a[Qwen3.5 family comparison on shared benchmarks : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1ro7xve/qwen35_family_comparison_on_shared_benchmarks/]
+    - 27B > 35B-A3B
+  - #a[Qwen3 vs Qwen3.5 performance : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rlckan/comment/o8r1k8i/]
+  - #a[Visualizing All Qwen 3.5 vs Qwen 3 Benchmarks : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rivckt/visualizing_all_qwen_35_vs_qwen_3_benchmarks/]
+  - Qwen3.5-35B-A3B
+    - #a[Qwen3.5-35B-A3B Q4 Quantization Comparison : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rfds1h/qwen3535ba3b_q4_quantization_comparison/]
+      - AesSedai Q4_K_M > unsloth_UD-Q4_K_XL
+    - #a[Qwen3.5-35B-A3B quantization quality + speed benchmarks on RTX 5080 16GB (Q8_0 vs Q4_K_M vs UD-Q4_K_XL) : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rei65v/qwen3535ba3b_quantization_quality_speed/]
+  - #a[Qwen3.5 27B better than 35B-A3B? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1re72h4/qwen35_27b_better_than_35ba3b/]
+  - #a[Qwen3.5 Model Comparison: 27B vs 35B on RTX 4090 : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1renq5y/qwen35_model_comparison_27b_vs_35b_on_rtx_4090/]
+    - 35B-A3B Q3 = 27B Q4
+  - #a[Is Qwen3.5-9B enough for Agentic Coding? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1riwy9w/is_qwen359b_enough_for_agentic_coding/]
+  - #a[Qwen3.5 122B and 35B models offer Sonnet 4.5 performance on local computers | Hacker News][https://news.ycombinator.com/item?id=47199781]
+
+  #a[Qwen 3.5-35B-A3B is beyond expectations. It's replaced GPT-OSS-120B as my daily driver and it's 1/3 the size. : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rh43za/qwen_3535ba3b_is_beyond_expectations_its_replaced/]
+
+  #a[Qwen3.5-35B-A3B hits 37.8% on SWE-bench Verified Hard --- nearly matching Claude Opus 4.6 (40%) with the right verification strategy : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rkdlqi/qwen3535ba3b_hits_378_on_swebench_verified_hard/]
+
+  vs. Qwen3-Coder-Next:
+  - #a[Qwen3 Coder Next | Qwen3.5 27B | Devstral Small 2 | Rust & Next.js Benchmark : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rhfque/qwen3_coder_next_qwen35_27b_devstral_small_2_rust/]
+    - Qwen3-Coder-Next > Qwen3.5-27B > Qwen3.5-35B-A3B
+  - #a[Does Qwen3.5 35b outperform Qwen3 coder next 80b for you? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rgoygs/does_qwen35_35b_outperform_qwen3_coder_next_80b/]
+    - Qwen3-Coder-Next > Qwen3.5-35B-A3B
+  - #a[Qwen3-Coder-Next vs Qwen3.5-35B-A3B vs Qwen3.5-27B - A quick coding test : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rdnxe6/qwen3codernext_vs_qwen3535ba3b_vs_qwen3527b_a/]
+    - Qwen3-Coder-Next > Qwen3.5-35B-A3B > Qwen3.5-27B
+  - #a[Qwen3.5-35B-A3B vs Qwen3 Coder 30B A3B Instruct for running Claude Code locally? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rjg5qm/qwen3535ba3b_vs_qwen3_coder_30b_a3b_instruct_for/]
+    - Qwen3.5 > Qwen3-Coder
+  - #a[Qwen3.5-27B-UD-Q4_K_XL (GPU) vs Qwen3-Coder-Next-UD-Q3_K_XL (GPU+SYS) : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rp8xhm/qwen3527budq4_k_xl_gpu_vs_qwen3codernextudq3_k_xl/]
+  - #a[Can we expect qwen3.5-coder versions? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rnwi4e/can_we_expect_qwen35coder_versions/]
+
+  #a[Anybody able to get Qwen3.5-35b-a3b working with claude code ? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rh6455/anybody_able_to_get_qwen3535ba3b_working_with/]
 
 #t[2601]
 #a[Alternatives to Qwen3-coder-30B? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1qmkc1j/alternatives_to_qwen3coder30b/]
@@ -128,3 +170,6 @@ Abliterated:
 
 #t[2602]
 #a[Best Model for single 3090 in 2026? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rbdsds/best_model_for_single_3090_in_2026/]
+
+#t[2603]
+#a[Costs-performance tradeoff for Qwen3, Qwen3.5 and other models (cost as proxy for compute) : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rjnpuv/costsperformance_tradeoff_for_qwen3_qwen35_and/]
