@@ -43,6 +43,7 @@ Windows:
 = Models
 - ```sh llama-server -hf {user}/{repo}{:quant ? Q4_K_M}```
   - ModelScope: `$env:MODEL_ENDPOINT='https://www.modelscope.cn/'`
+    (No CLI arg)
   - No way to specify `quant` for `mmproj`?
     - Place a fake one first.
 - Data: `$LLAMA_CACHE/{user}_{repo}_{filename}`
@@ -54,8 +55,9 @@ Windows:
   - ```sh --no-mmap```
     #footnote[#a[Feature Request: Avoid loading GPU layers into RAM before moving them to VRAM. This should allow the use of `--no-mmap` with models that do not fit in RAM but fit in RAM+VRAM. - Issue \#9059 - ggml-org/llama.cpp][https://github.com/ggml-org/llama.cpp/issues/9059]]
 
-- Router mode: `llama-server`
-  - `--models-max 4`
+- #a[Router mode][https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md#using-multiple-models]
+  : ```sh llama-server```
+  - ```sh --models-max 4``` by default
   - All loaded models will use 8192 context and full GPU offload.
   
     You can also define per-model settings using presets:
@@ -68,6 +70,12 @@ Windows:
     ctx-size = 65536
     temp = 0.7
     ```
+  - Preset `model` and `mmproj` are not relative to the preset file...
+  - When overriding models downloaded from HF, ```sh --hf-repo``` will be kept so it needs network and may fail.
+  - [ ] #a[Feature Request: Option to show only preset-defined models in router mode - Issue \#18609][https://github.com/ggml-org/llama.cpp/issues/18609]
+  - Switches even the target model is already loaded.
+    #footnote[#a[llama.cpp models preset with multiple presets for the same model : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rj8sow/llamacpp_models_preset_with_multiple_presets_for/]]
+
 - #a[llama-swap: Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc][https://github.com/mostlygeek/llama-swap]
 
 #a[New in llama.cpp: Model Management][https://huggingface.co/blog/ggml-org/model-management-in-llamacpp]
@@ -135,6 +143,7 @@ VRAM (`unsloth/Qwen3-Coder-Next-GGUF:UD-IQ3_XXS`):
   #a-badge[https://www.reddit.com/r/LocalLLaMA/comments/1qhaq21/new_in_llamacpp_anthropic_messages_api/]
 
 - Ollama: ```sh llama-server --port 11434 ...```
+  - ```sh LLAMA_ARG_PORT=11434```
 
   #a[server : add VSCode's Github Copilot Chat support by ggerganov - Pull Request \#12896][https://github.com/ggml-org/llama.cpp/pull/12896]
   - #a[You can now use GitHub Copilot with native llama.cpp : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1jxbba9/you_can_now_use_github_copilot_with_native/]
@@ -169,7 +178,9 @@ VRAM (`unsloth/Qwen3-Coder-Next-GGUF:UD-IQ3_XXS`):
 
 = UI
 - `llama-server` web UI
-  - Local storage only
+  - IndexedDB (and local storage) only
+  - Import/Export
+    - Idempotent
 
 = Tools
 == #a[ggml-org/llama.vscode: VS Code extension for LLM-assisted code/text completion][https://github.com/ggml-org/llama.vscode]
