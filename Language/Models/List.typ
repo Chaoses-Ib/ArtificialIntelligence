@@ -162,6 +162,12 @@ Abliterated:
   - #a[Qwen3.5-27B-UD-Q4_K_XL (GPU) vs Qwen3-Coder-Next-UD-Q3_K_XL (GPU+SYS) : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rp8xhm/qwen3527budq4_k_xl_gpu_vs_qwen3codernextudq3_k_xl/]
   - #a[Can we expect qwen3.5-coder versions? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rnwi4e/can_we_expect_qwen35coder_versions/]
 
+  #a[Qwen 3.5 27B is the REAL DEAL - Beat GPT-5 on my first test : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rnwiyx/qwen_35_27b_is_the_real_deal_beat_gpt5_on_my/]
+  - #q[The 35B MOE is fast but not as smart as 27B but 27B is dead slow.
+    I can run Qwen Coder 80B MOE at almost the same speed as 35B and it's a lot smarter than 27B.]
+
+  #a[My Experience with Qwen 3.5 35B : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1ryc3w0/my_experience_with_qwen_35_35b/]
+
   #a[Anybody able to get Qwen3.5-35b-a3b working with claude code ? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rh6455/anybody_able_to_get_qwen3535ba3b_working_with/]
 
 #t[2601]
@@ -173,3 +179,25 @@ Abliterated:
 
 #t[2603]
 #a[Costs-performance tradeoff for Qwen3, Qwen3.5 and other models (cost as proxy for compute) : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1rjnpuv/costsperformance_tradeoff_for_qwen3_qwen35_and/]
+
+== 26Q2
+- #a[Gemma 4][https://deepmind.google/models/gemma/gemma-4/]
+  #a-badge[https://www.reddit.com/r/LocalLLaMA/comments/1salgre/gemma_4_has_been_released/]
+  #a-badge[https://news.ycombinator.com/item?id=47616361]
+
+  #a[Gemma 4 insane benchmarks : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1salz5u/]
+
+  #a[Gemma 4 and Qwen3.5 on shared benchmarks : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1saoyj7/gemma_4_and_qwen35_on_shared_benchmarks/]
+
+  #a[A day has passed which is a decade in the ai world - is qwen 3.5 27b q6 still the best model to run on a 5090, or does the new bonsai and gemma models beat it? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1sb363l/a_day_has_passed_which_is_a_decade_in_the_ai/]
+  - #q[It’s actually very close to a tie. Qwen wins at benchmarks and tool calling (think openclaw), Gemma wins at everything else.]
+
+  #a[so.... Qwen3.5 or Gemma 4? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1scbpmo/so_qwen35_or_gemma_4/]
+  - #q[Qwen is the better model if it has to interact with code, otherwise use gemma.]
+
+  #a[Gemma 4 MOE is very bad at agentic coding. Couldn't do things CLine + Qwen can do. : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1scncrn/gemma_4_moe_is_very_bad_at_agentic_coding_couldnt/]
+  - #q[Nobody is beating qwen 3 coder next 80b on the desktop for what it does. And if I'm honest I can't believe Qwen released it at all.]
+
+  #a[Gemma 4 31B vs Gemma 4 26B-A4B vs Qwen 3.5 27B --- 30-question blind eval with Claude Opus 4.6 as judge : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1scwos6/gemma_4_31b_vs_gemma_4_26ba4b_vs_qwen_35_27b/]
+
+  #a[Gemma 4 31B vs Qwen 3.5 27B vs Qwen Coder Next : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1sdfvmj/gemma_4_31b_vs_qwen_35_27b_vs_qwen_coder_next/]
