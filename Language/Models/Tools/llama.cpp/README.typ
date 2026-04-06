@@ -93,6 +93,26 @@ Windows:
 
   #a[Why does llama.cpp use so much VRAM (and RAM)? - ggml-org/llama.cpp - Discussion \#9784][https://github.com/ggml-org/llama.cpp/discussions/9784]
 
+- Server slots (`n_slots`, ```sh -np```) usually defaults to 4.
+
+  #q[`-np` is used to to specify the maximum number of parallel sequences that will be processed in a single logical batch.
+  Think of it also as the maximum number of parallel, independent users that you would like to be able to serve simultaneously.
+  If `-np 1` and 4 requests come at the same time, they will be processed one after the other.
+  On the other hand, if `-np 4` then all 4 requests will start processing together in parallel.
+  When `-np` is larger than 1 then the total context size `--ctx-size` is split equally by that number.
+  So you have to be careful to adjust `--ctx-size` to accommodate your worst case scenario.]
+  #footnote[#a[llama.cpp parallel arguments need explanation : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1f4bact/llamacpp_parallel_arguments_need_explanation/]]
+
+  - Use ```sh -np 1``` to save VRAM, especially for MoE.
+    #footnote[#a[Tips: remember to use -np 1 with llama-server as a single user : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1s4c7t3/tips_remember_to_use_np_1_with_llamaserver_as_a/]]
+    #footnote[#a[VRAM optimization for gemma 4 : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1sb80yv/vram_optimization_for_gemma_4/]]
+    #footnote[#a[My biggest Issue with the Gemma-4 Models is the Massive KV Cache!! : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1sbe40t/my_biggest_issue_with_the_gemma4_models_is_the/]]
+
+    #q[If you use the LLM only for chat, you should absolutely set `-np` to 1, 
+    but if you have any agentic use cases where you might have more than one agent working in parallel, you should set `-np` to the number of agents you have,
+    though I should caveat that batching will only work with dense models.
+    For MoE models, my experience has been hit and miss, depending on the overlap in expert activations.]
+
 VRAM (`unsloth/Qwen3-Coder-Next-GGUF:UD-IQ3_XXS`):
 - `-c 4096`
   ```sh
