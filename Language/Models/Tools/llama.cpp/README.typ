@@ -49,6 +49,10 @@ Windows:
 - Data: `$LLAMA_CACHE/{user}_{repo}_{filename}`
   - Windows: `%LOCALAPPDATA%\llama.cpp`
 
+  New HF:
+  #footnote[#a[Breaking change in llama-server? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1s62el8/breaking_change_in_llamaserver/]]
+  - Windows: `%USERPROFILE%\.cache\huggingface\hub\models--{user}--{repo}`
+
 - mmap by default
   #footnote[#a[Should use `mmap` for model loading - Issue \#91 - ggml-org/llama.cpp][https://github.com/ggml-org/llama.cpp/issues/91]]
   , which may use a lot of RAM (temporarily).

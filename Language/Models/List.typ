@@ -201,3 +201,28 @@ Abliterated:
   #a[Gemma 4 31B vs Gemma 4 26B-A4B vs Qwen 3.5 27B --- 30-question blind eval with Claude Opus 4.6 as judge : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1scwos6/gemma_4_31b_vs_gemma_4_26ba4b_vs_qwen_35_27b/]
 
   #a[Gemma 4 31B vs Qwen 3.5 27B vs Qwen Coder Next : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1sdfvmj/gemma_4_31b_vs_qwen_35_27b_vs_qwen_coder_next/]
+
+- #a[Qwen3.6-35B-A3B: Agentic Coding Power, Now Open to All][https://qwen.ai/blog?id=qwen3.6-35b-a3b]
+  - #a[Qwen3.6 - How to Run Locally | Unsloth Documentation][https://unsloth.ai/docs/models/qwen3.6]
+  - #a[AesSedai/Qwen3.6-35B-A3B-GGUF][https://huggingface.co/AesSedai/Qwen3.6-35B-A3B-GGUF]
+    - ```sh llama-server -hf AesSedai/Qwen3.5-35B-A3B-GGUF:Q5_K_M --temp 0.6 --top-k 20 --top-p 0.95 --min-p 0.00 -c 180000 -np 1```
+
+  #a[Qwen3.6-35B-A3B released! : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1sn3izh/qwen3635ba3b_released/]
+  #a-badge[https://www.reddit.com/r/LocalLLaMA/comments/1sn3ikv/released_qwen3635ba3b/]
+  - #q[the older Qwen 3.5 35b was on par with qwen3 coder next already]
+    - #q[That is wrong. 35B was behind Coder-Next by a big margin. I run both in C++ and Coder-next was amazing. 27B Superior though.]
+    - #q[3.5 122B >= 3.5 27B > 3-Coder-next > 35B-A3B > 9B]
+
+  #a[PSA: Qwen3.6 ships with `preserve_thinking`. Make sure you have it on. : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1sne4gh/psa_qwen36_ships_with_preserve_thinking_make_sure/]
+  - ```sh --chat-template-kwargs '{"preserve_thinking": true}'```
+
+  #a[Qwen3.6 GGUF Benchmarks : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1so5nrl/qwen36_gguf_benchmarks/]
+  
+  #a[Qwen3.6. This is it. : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1so1533/qwen36_this_is_it/]
+
+  #a[Qwen3.6-35B is worse at tool use and reasoning loops than 3.5? : r/LocalLLaMA][https://www.reddit.com/r/LocalLLaMA/comments/1sni4c1/qwen3635b_is_worse_at_tool_use_and_reasoning/]
+
+  #a[浅试了一下 Qwen3.6-35B-A3B，很强 - V2EX][https://www.v2ex.com/t/1206447#reply2]
+
+#a[CanIRun.ai --- Can your machine run AI models?][https://www.canirun.ai/]
+#a-badge[https://pc.watch.impress.co.jp/docs/news/yajiuma/2102148.html]
